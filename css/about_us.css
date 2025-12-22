@@ -440,25 +440,42 @@ span {
     margin-bottom: 20px;
 }
 
-.blogs img {
+.community-icon img {
     height: 35px;
     width: 35px;
     display: block;
     margin-right: 10px;
 }
 
-.blogs {
+.community-icon {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
-.blogs h3 {
-    margin-bottom: 0;
+.community-text {
+    text-align: center;
+    color: var(--text-primary-color);
+    text-transform: capitalize;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-.perent {
+.community-lower-sec {
     display: flex;
 }
+
+.community-blogs-text {
+    margin-right: 70px;
+}
+
+.community-icon h3 {
+    margin-bottom: 0;
+    color: var(--text-primary-color);
+    font-weight: 600;
+}
+
 
 
 
