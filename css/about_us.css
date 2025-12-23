@@ -434,6 +434,7 @@ p,
 
 .community-right h2 {
     color: var(--text-primary-color);
+    font-size: 36px;
 }
 
 .community-right p {
@@ -477,14 +478,53 @@ p,
     font-weight: 600;
 }
 
-
-
-
-
-
-
-
 /* community sec end */
+.expertise-sec {
+    background-color: var(--text-primary-color);
+}
+
+.expertise-child {
+    display: flex;
+    margin: 0 -35px;
+}
+
+.expertise-left,
+.expertise-right {
+    width: 50%;
+    padding: 0 35px;
+}
+
+.expertise-left p {
+    margin-bottom: 45px;
+    color: #08221978;
+    width: 90%;
+}
+
+.quick-search img {
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.quick-search {
+    text-transform: capitalize;
+    background-color: #D1FCCC;
+    color: #00000092;
+    border-radius: 8px;
+    padding: 6px 10px;
+    margin-right: 18px;
+}
+
+.first-row {
+    margin-bottom: 20px;
+}
+
+.expertise-video img {
+    height: 515px;
+    width: 647px;
+}
+
 
 
 
