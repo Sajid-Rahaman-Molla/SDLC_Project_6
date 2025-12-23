@@ -479,6 +479,7 @@ span {
 }
 
 /* community sec end */
+/* our expertise sec start */
 .expertise-sec {
     background-color: var(--text-primary-color);
 }
@@ -524,7 +525,7 @@ span {
     height: 515px;
     width: 647px;
 }
-
+/* our expertise sec end */
 
 
 
