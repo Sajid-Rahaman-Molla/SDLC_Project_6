@@ -514,10 +514,8 @@ p,
     border-radius: 8px;
     padding: 6px 10px;
     margin-right: 18px;
-}
-
-.first-row {
-    margin-bottom: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
 .expertise-video img {
@@ -623,6 +621,7 @@ p,
     width: 23.33%;
     padding: 0 20px;
 }
+
 .footer-1 {
     width: 30%;
 }
