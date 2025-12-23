@@ -398,6 +398,7 @@ span {
 /* community sec start */
 .community-sec {
     background-color: var(--text-primary-color);
+    position: relative;
 }
 
 .community-child {
