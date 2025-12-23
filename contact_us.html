@@ -1,11 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- manual css link style.css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- manual css link contact_us.css -->
+    <link rel="stylesheet" href="./css/contact_us.css">
 </head>
+
 <body>
-    <h1>mhgfdfdghjkl</h1>
+    <!-- header-sec-starts -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav-bar">
+                <a href="./index.html" class="nav-logo"><img src="./images/nav-logo.png" alt="main-logo"></a>
+                <ul class="nav-links">
+                    <li><a href="./index.html">home</a></li>
+                    <li><a href="./about_us.html" class="active-page-select">about us</a></li>
+                    <li><a href="./blog_list.html">blog list</a></li>
+                    <li><a href="./bookmarks.html">bookmarks</a></li>
+                    <li><a href="./faq_page.html">FAQs</a></li>
+                    <li><a href="./contact_us.html">contact us</a></li>
+                </ul>
+                <div class="nav-right">
+                    <div class="nav-right-2">
+                        <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <a href="./login.html" class="user-signup"><i class="fa-solid fa-user-plus"></i></a>
+                        <a href="./signup.html" class="cmn-btn">sign up</a>
+                    </div>
+                    <!-- <a class="menu-bar" id="menu-bar"><i class="fa-solid fa-bars"></i></a> -->
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- header-sec-ends -->
+    <!-- contact-sec-starts -->
+    <section class="contact-info">
+        <div class="container">
+            <!-- heading part -->
+            <div class="child-contact">
+                <!-- Top Left Image -->
+                <img src="./images/corner-image-contact.png" class="corner-img top-left" alt="Top Left">
+
+                <div class="contact-head">
+                    <figure><img src="./images/contact-us-logo.png" class="contact-logo" alt=""></figure>
+                    <h2 class="contact-heading">We're Here To Listen</h2>
+                    <p class="head-para"> Contact the Better Being team for editorial inquiries, partnership
+                        opportunities,
+                        or
+                        personalized support regarding our health resources.</p>
+                </div>
+                <!-- row start -->
+                <div class="row">
+                    <!-- left col -->
+                    <div class="col left-col">
+                        <div class="left-col-head">
+                            <h3>Contact Information</h3>
+                            <p class="sub-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut
+                                labore et dolore magna aliqua.</p>
+                        </div>
+
+                        <ul class="contact-info">
+                            <li><a href="#"><i class="fa-solid fa-phone"></i> +(555) 012-3456</a></li>
+                            <li><a href="#"><i class="fa-solid fa-inbox"></i> betterbeing@gmail.com</a></li>
+                            <li><a href="#"><i class="fa-solid fa-location-crosshairs"></i>Street 123 New York, USA</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- right col -->
+                    <div class="col right col">
+                        <form>
+                            <div class="form-grp">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="Enter your full name">
+                            </div>
+                            <div class="form-grp">
+                                <label>Email Address</label>
+                                <input type="email" placeholder="Enter your Mail">
+                            </div>
+                            <div class="form-grp">
+                                <label>Mobile Number (Optional) </label>
+                                <input type="text" placeholder="Enter your Phone Number">
+                            </div>
+                            <div class="form-grp">
+                                <label>Your Message</label>
+                                <textarea rows="4" placeholder="Leave a message"></textarea>
+                            </div>
+                            <div class="form-buttons">
+                                <button type="reset" class="btn-clear">Clear</button>
+                                <button type="Submit" class="btn-submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Bottom Right Image -->
+                <img src="./images/corner-image-contact.png" class="corner-img bottom-right" alt="Bottom Right">
+            </div>
+        </div>
+    </section>
+
 </body>
+
 </html>
