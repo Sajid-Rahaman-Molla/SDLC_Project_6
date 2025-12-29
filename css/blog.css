@@ -251,7 +251,6 @@ a {
   background: #E8E8E8;
   padding: 12px;
   border-radius: 10px;
-  /* box-shadow: 0 4px 12px rgba(0,0,0,0.1); */
   margin-bottom: 30px;
 }
 
@@ -308,14 +307,7 @@ a {
   
 }
 
-/* .bookmark:hover {
-    background-color: #082219;
 
-} */
-
-/* .bookmark:active{
-    background-color: #082219;
-} */
 
 
 .blog-content {
@@ -404,14 +396,11 @@ a {
 }
 
 .blog-card:hover .learn-more img{
-  /* transform: translateY(-6px); */
   transform: rotate(-45deg);
   color: #79B531;
 }
 
-/* .blog-content .learn-more:hover img {
-  transform: translateX(4px);
-} */
+
 
 .blog-card:hover .blog-content h3{
   color: #79B531;
