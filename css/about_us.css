@@ -549,10 +549,24 @@ p,
 
 .cmn-contact-card-top {
     text-align: center;
+    margin-bottom: 25px;
 }
 
-.cmn-contact-card-top img {
+.cmn-contact-card-top svg {
+    color: var(--primary-color);
     width: 50px;
+}
+
+.cmn-contact-card:hover svg {
+    color: var(--text-primary-color);
+}
+
+.cmn-contact-card:hover {
+    color: var(--text-primary-color);
+}
+
+.cmn-contact-card:hover a {
+    color: var(--text-primary-color);
 }
 
 .office-phone-wrapper,
@@ -563,10 +577,15 @@ p,
 }
 
 .cmn-contact-card {
-    width: calc(50% - 30px);
+    width: calc(50% - 15px);
     border: 2px solid var(--primary-color);
     border-radius: 20px;
     padding: 30px;
+    transition: var(--default-animation);
+}
+
+.cmn-contact-card:hover {
+    background-color: var(--primary-color);
 }
 
 .cmn-contact-card-heading {
@@ -574,6 +593,7 @@ p,
     font-weight: 500;
     margin-bottom: 7px;
     text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .cmn-contact-card-bottom a {
@@ -592,8 +612,10 @@ p,
 }
 
 .map-wrapper iframe {
-    border-radius: 12px;
+    border-radius: 25px;
     display: block;
+    width: 900px;
+    height: 500px;
 }
 
 .contact-right {
@@ -601,7 +623,7 @@ p,
     align-items: end;
 }
 
-.small{
+.small {
     text-transform: lowercase !important;
 }
 
