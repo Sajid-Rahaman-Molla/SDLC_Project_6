@@ -3,145 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Image Background Circle Animation</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <style>
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #fff;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-        /* main wrapper */
-        .image-wrapper {
-            position: relative;
-            width: 280px;
-            height: 280px;
-        }
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        /* image */
-        .image-wrapper img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            position: relative;
-            z-index: 3;
-        }
+    <!-- slick cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
-        /* circles common */
-        .circle {
-            position: absolute;
-            border-radius: 50%;
-            z-index: 1;
-            animation-duration: 6s;
-            animation-iteration-count: infinite;
-            animation-timing-function: ease-in-out;
-        }
 
-        /* individual circles */
-        .green {
-            width: 180px;
-            height: 180px;
-            background: #c9ffb5;
-            top: -30px;
-            left: -50px;
-            animation-name: moveGreen;
-        }
-
-        .blue {
-            width: 45px;
-            height: 45px;
-            background: #cfefff;
-            bottom: 40px;
-            left: -30px;
-            animation-name: moveBlue;
-            animation-delay: 1s;
-        }
-
-        .yellow {
-            width: 170px;
-            height: 170px;
-            background: #ffe09a;
-            bottom: -30px;
-            right: -50px;
-            animation-name: moveYellow;
-            animation-delay: 2s;
-        }
-
-        img {
-            z-index: 1000;
-        }
-
-        /* 🔄 Animations */
-        @keyframes moveGreen {
-            0% {
-                transform: translateX(0);
-                /* z-index: 1; */
-            }
-
-            40% {
-                transform: translateX(120px);
-                /* z-index: 4; */
-            }
-
-            60% {
-                transform: translateX(120px);
-                /* z-index: 1; */
-            }
-
-            100% {
-                transform: translateX(0);
-                /* z-index: 1; */
-            }
-        }
-
-        @keyframes moveBlue {
-            0% {
-                transform: translateX(0);
-                /* z-index: 1; */
-            }
-
-            40% {
-                transform: translateX(90px);
-                /* z-index: 4; */
-            }
-
-            60% {
-                transform: translateX(90px);
-                /* z-index: 1; */
-            }
-
-            100% {
-                transform: translateX(0);
-                /* z-index: 1; */
-            }
-        }
-
-        @keyframes moveYellow {
-            0% {
-                transform: translateX(0);
-                /* z-index: 1; */
-            }
-
-            40% {
-                transform: translateX(-120px);
-                /* z-index: 4; */
-            }
-
-            60% {
-                transform: translateX(-120px);
-                /* z-index: 1; */
-            }
-
-            100% {
-                transform: translateX(0);
-                /* z-index: 1; */
-            }
-        }
-    </style>
+    <!-- manual css link style.css -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -151,12 +28,12 @@
             <nav class="nav-bar">
                 <a href="./index.html" class="nav-logo"><img src="./images/nav-logo.png" alt="main-logo"></a>
                 <ul class="nav-links">
-                    <li><a href="./index.html">home</a></li>
+                    <li><a href="./index.html" class="active-page-select">home</a></li>
                     <li><a href="./about_us.html">about us</a></li>
                     <li><a href="./blog_list.html">blog list</a></li>
                     <li><a href="./bookmarks.html">bookmarks</a></li>
                     <li><a href="./faq_page.html">FAQs</a></li>
-                    <li><a href="./contact_us.html" class="active-page-select">contact us</a></li>
+                    <li><a href="./contact_us.html">contact us</a></li>
                 </ul>
                 <div class="nav-right">
                     <div class="nav-right-2">
@@ -169,15 +46,148 @@
             </nav>
         </div>
     </header>
-    <div class="image-wrapper">
-        <!-- background circles -->
-        <span class="circle green"></span>
-        <span class="circle blue"></span>
-        <span class="circle yellow"></span>
+    <!-- header-sec-ends -->
+    <main>
+        <!-- banner-sec-starts -->
+        <section class="banner-section">
+            <div class="container">
+                <div class="banner-content">
+                    <h1>Held By Nature, Guided By Calm</h1>
+                    <p class="sub-title heading-3">A Gentle Space To Heal And Grow</p>
 
-        <!-- main image -->
-        <img src="./images/about-img.png" alt="Meditation">
-    </div>
+                    <a href="#" class="cmn-btn banner-btn">Explore Now</a>
+
+                    <p class="quote">
+                        “Meditation is the delicate art of doing nothing.”
+                        <span class="quote-writer-name">- Sri Sri Ravi Shankar</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- banner-sec-ends -->
+
+        <!-- featured-blogs-sec-starts -->
+        <section class="featured-blog-section cmn-gap">
+            <div class="container">
+                <h2 class="section-title">Featured Blogs</h2>
+
+               
+            </div>
+        </section>
+        <!-- featured-blogs-sec-ends -->
+
+
+    </main>
+
+
+
+
+    <!------ footer-sec-starts ------>
+    <footer class="footer-sec">
+        <div class="container">
+            <!-- Top Support Section -->
+            <div class="footer-top">
+                <div class="footer-heading heading-3">Stay Healthy & Informed: Subscribe to Our Newsletter</div>
+                <p class="heading-6">Get the latest insights, recipes, and expert advice delivered straight to your
+                    inbox every week. We
+                    cover everything
+                    from mental clarity to fitness routines to help you live a balanced, vibrant life.</p>
+                <form class="subscribe-form">
+                    <span class="mail-icon">✉</span>
+                    <input type="email" class="subscribe-input" placeholder="Enter your mail" required />
+                    <button class="subscribe-btn cmn-btn">Subscribe</button>
+                </form>
+            </div>
+
+            <!-- Bottom Footer Columns -->
+            <div class="footer-child">
+                <!-- footer-1 -->
+                <div class="cmn-footer footer-1">
+                    <a href="./index.html" class="footer-logo"><img src="./images/footer-logo.png" alt=""></a>
+                    <p class="footer-text">Welcome to Better Being! Here, you can explore insightful articles and blogs
+                        covering fitness.
+                    </p>
+                </div>
+                <!-- footer-2 -->
+                <div class="cmn-footer">
+                    <div class="footer-heading">Quick links</div>
+                    <ul class="footer-links">
+                        <li><a href="./about_us.html">About Us</a></li>
+                        <li><a href="./blog_list.html">Blog List</a></li>
+                        <li><a href="./contact_us.html">bookmarks</a></li>
+                        <li><a href="./faq_page.html">FAQs</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <!-- footer-3 -->
+                <div class="cmn-footer">
+                    <div class="footer-heading">Support</div>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fa-solid fa-phone phone-icon"></i>+(555) 012-3456</a></li>
+                        <li><a href="#"><i class="fa-solid fa-envelope email-icon"></i> betterbeing@gmail.com </a></li>
+                    </ul>
+                </div>
+                <!-- footer-4 -->
+                <div class="cmn-footer newsletter">
+                    <div class="footer-heading">social media</div>
+                    <ul class="social-icons">
+                        <li> <a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li> <a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li> <a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li> <a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-end">
+                <div class="copy-right">copyright<i class="fa-regular fa-copyright copyright-icon"></i>2025 <a
+                        href="./index.html" class="brand-a">betterbeing</a><span class="reserved-text"> all rights
+                        reserved</span></div>
+            </div>
+        </div>
+    </footer>
+    <!-- ---- footer-sec-ends ---- -->
+
+
+
+
+
+
+
+    <!-- slick cdn js -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+    <!-- slick js -->
+    <script>
+        $('.blog-slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            autoplay: false,
+            prevArrow: '<button class="slick-prev custom-arrow">←</button>',
+            nextArrow: '<button class="slick-next custom-arrow">→</button>',
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
+    </script>
+
 
 </body>
 
