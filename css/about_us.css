@@ -133,6 +133,7 @@ p,
     font-weight: 400;
     color: var(--span-text-color);
     text-transform: capitalize;
+    display: inline-block;
     margin-bottom: 15px;
 }
 
@@ -523,7 +524,94 @@ p,
     height: 515px;
     width: 647px;
 }
+
 /* our expertise sec end */
+/* contact us sec start */
+.contact-sec {
+    background-color: var(--text-primary-color);
+}
+
+.contact-child {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -27px;
+}
+
+.contact-left {
+    width: 40%;
+    padding: 0 27px;
+}
+
+.contact-right {
+    width: 60%;
+    padding: 0 27px;
+}
+
+.cmn-contact-card-top {
+    text-align: center;
+}
+
+.cmn-contact-card-top img {
+    width: 50px;
+}
+
+.office-phone-wrapper,
+.mail-time-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cmn-contact-card {
+    width: calc(50% - 30px);
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.cmn-contact-card-heading {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 7px;
+    text-transform: capitalize;
+}
+
+.cmn-contact-card-bottom a {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: #00000084;
+}
+
+.cmn-contact-card-bottom {
+    text-align: center;
+}
+
+.office-phone-wrapper {
+    margin-bottom: 50px;
+}
+
+.map-wrapper iframe {
+    border-radius: 12px;
+    display: block;
+}
+
+.contact-right {
+    display: flex;
+    align-items: end;
+}
+
+.small{
+    text-transform: lowercase !important;
+}
+
+
+
+
+
+
+
+/* contact us sec end */
 
 
 
