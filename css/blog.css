@@ -284,3 +284,18 @@ a {
   color: ;
 }
 
+<<<<<<< HEAD
+=======
+/* footer-sec-starts */
+.footer-sec {
+  background: url(../images/footer-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 60px 0;
+}
+
+.blog-content .learn-more:hover img {
+  transform: translateX(4px);
+}
+>>>>>>> b1bcd4140aaf6e69deb33e36da59ad04e40eda13

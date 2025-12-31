@@ -3,145 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Image Background Circle Animation</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <style>
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #fff;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>betterbeing</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-        /* main wrapper */
-        .image-wrapper {
-            position: relative;
-            width: 280px;
-            height: 280px;
-        }
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        /* image */
-        .image-wrapper img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            position: relative;
-            z-index: 3;
-        }
+    <!-- slick cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!-- fontaswm cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- swiper cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-        /* circles common */
-        .circle {
-            position: absolute;
-            border-radius: 50%;
-            z-index: 1;
-            animation-duration: 6s;
-            animation-iteration-count: infinite;
-            animation-timing-function: ease-in-out;
-        }
-
-        /* individual circles */
-        .green {
-            width: 180px;
-            height: 180px;
-            background: #c9ffb5;
-            top: -30px;
-            left: -50px;
-            animation-name: moveGreen;
-        }
-
-        .blue {
-            width: 45px;
-            height: 45px;
-            background: #cfefff;
-            bottom: 40px;
-            left: -30px;
-            animation-name: moveBlue;
-            animation-delay: 1s;
-        }
-
-        .yellow {
-            width: 170px;
-            height: 170px;
-            background: #ffe09a;
-            bottom: -30px;
-            right: -50px;
-            animation-name: moveYellow;
-            animation-delay: 2s;
-        }
-
-        img {
-            z-index: 1000;
-        }
-
-        /* 🔄 Animations */
-        @keyframes moveGreen {
-            0% {
-                transform: translateX(0);
-                /* z-index: 1; */
-            }
-
-            40% {
-                transform: translateX(120px);
-                /* z-index: 4; */
-            }
-
-            60% {
-                transform: translateX(120px);
-                /* z-index: 1; */
-            }
-
-            100% {
-                transform: translateX(0);
-                /* z-index: 1; */
-            }
-        }
-
-        @keyframes moveBlue {
-            0% {
-                transform: translateX(0);
-                /* z-index: 1; */
-            }
-
-            40% {
-                transform: translateX(90px);
-                /* z-index: 4; */
-            }
-
-            60% {
-                transform: translateX(90px);
-                /* z-index: 1; */
-            }
-
-            100% {
-                transform: translateX(0);
-                /* z-index: 1; */
-            }
-        }
-
-        @keyframes moveYellow {
-            0% {
-                transform: translateX(0);
-                /* z-index: 1; */
-            }
-
-            40% {
-                transform: translateX(-120px);
-                /* z-index: 4; */
-            }
-
-            60% {
-                transform: translateX(-120px);
-                /* z-index: 1; */
-            }
-
-            100% {
-                transform: translateX(0);
-                /* z-index: 1; */
-            }
-        }
-    </style>
+    <!-- manual css link style.css -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -151,17 +33,19 @@
             <nav class="nav-bar">
                 <a href="./index.html" class="nav-logo"><img src="./images/nav-logo.png" alt="main-logo"></a>
                 <ul class="nav-links">
-                    <li><a href="./index.html">home</a></li>
+                    <li><a href="./index.html" class="active-page-select">home</a></li>
                     <li><a href="./about_us.html">about us</a></li>
                     <li><a href="./blog_list.html">blog list</a></li>
                     <li><a href="./bookmarks.html">bookmarks</a></li>
                     <li><a href="./faq_page.html">FAQs</a></li>
-                    <li><a href="./contact_us.html" class="active-page-select">contact us</a></li>
+                    <li><a href="./contact_us.html">contact us</a></li>
                 </ul>
                 <div class="nav-right">
                     <div class="nav-right-2">
-                        <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        <a href="./login.html" class="user-signup"><i class="fa-solid fa-user-plus"></i></a>
+                        <a href="#" class="search-icon"><img src="./images/home-page-images/search.png"
+                                alt="search"></a>
+                        <a href="./login.html" class="user-signup"><img src="./images/home-page-images/user.png"
+                                alt="signup"></a>
                         <a href="./signup.html" class="cmn-btn">sign up</a>
                     </div>
                     <!-- <a class="menu-bar" id="menu-bar"><i class="fa-solid fa-bars"></i></a> -->
@@ -169,15 +53,674 @@
             </nav>
         </div>
     </header>
-    <div class="image-wrapper">
-        <!-- background circles -->
-        <span class="circle green"></span>
-        <span class="circle blue"></span>
-        <span class="circle yellow"></span>
+    <!-- header-sec-ends -->
+    <main>
+        <!-- banner-sec-starts -->
+        <section class="banner-section">
+            <div class="container">
+                <div class="banner-content">
+                    <h1>Held By Nature, Guided By Calm</h1>
+                    <p class="sub-title heading-3">A Gentle Space To Heal And Grow</p>
 
-        <!-- main image -->
-        <img src="./images/about-img.png" alt="Meditation">
-    </div>
+                    <a href="#" class="cmn-btn banner-btn">Explore Now</a>
+                    <p class="quote" id="dynamicText">hdhihfi</p>
+                    <span class="quote-writer-name" id="dynamicsubText">by kally</span>
+                </div>
+            </div>
+        </section>
+        <!-- banner-sec-ends -->
+
+        <!-- featured-blogs-sec-starts -->
+        <section class="featured-blog-section cmn-gap">
+            <div class="container">
+                <div class="featured-blog-child">
+                    <h2 class="section-title">Featured Blogs</h2>
+                    <div class="featured-card-sec blog-slider">
+                        <!-- swiper slide -->
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <!-- card-1 -->
+                                <div class="swiper-slide">
+                                    <div class="cmn-card">
+                                        <div class="card-img">
+                                            <img src="./images/home-page-images/featured-card-1.jpg"
+                                                alt="featured-card">
+                                            <span class="tag">Fitness</span>
+
+                                            <div class="icons">
+                                                <i class="fa-regular fa-bookmark bookmark"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-content">
+                                            <div class="meta">
+                                                <span><img src="./images/home-page-images/calendar (1).png"
+                                                        alt="calender">May 14,
+                                                    2025</span>
+                                                <span>
+                                                    <img src="./images/home-page-images/chat.png" alt="comment">0
+                                                </span>
+                                            </div>
+
+                                            <h3>Stretching Exercises: Your Friendly Guide</h3>
+                                            <p>
+                                                Building the perfect workout routine is key if you want to get fitter,
+                                                boost your energy, or simply add a healthy habit.
+                                            </p>
+                                            <a href="#" class="read-more">Learn More <i
+                                                    class="fa-solid fa-arrow-right"></i>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- card-2 -->
+                                <div class="swiper-slide">
+                                    <div class="cmn-card">
+                                        <div class="card-img">
+                                            <img src="./images/home-page-images/featured-card-1.jpg"
+                                                alt="featured-card">
+                                            <span class="tag">Fitness</span>
+
+                                            <div class="icons">
+                                                <i class="fa-regular fa-bookmark bookmark"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-content">
+                                            <div class="meta">
+                                                <span><img src="./images/home-page-images/calendar (1).png"
+                                                        alt="calender">May 14,
+                                                    2025</span>
+                                                <span>
+                                                    <img src="./images/home-page-images/chat.png" alt="comment">0
+                                                </span>
+                                            </div>
+
+                                            <h3>Stretching Exercises: Your Friendly Guide</h3>
+                                            <p>
+                                                Building the perfect workout routine is key if you want to get fitter,
+                                                boost your energy, or simply add a healthy habit.
+                                            </p>
+                                            <a href="#" class="read-more">Learn More <i
+                                                    class="fa-solid fa-arrow-right"></i>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- card-3 -->
+                                <div class="swiper-slide">
+                                    <div class="cmn-card">
+                                        <div class="card-img">
+                                            <img src="./images/home-page-images/featured-card-1.jpg"
+                                                alt="featured-card">
+                                            <span class="tag">Fitness</span>
+
+                                            <div class="icons">
+                                                <i class="fa-regular fa-bookmark bookmark"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-content">
+                                            <div class="meta">
+                                                <span><img src="./images/home-page-images/calendar (1).png"
+                                                        alt="calender">May 14,
+                                                    2025</span>
+                                                <span>
+                                                    <img src="./images/home-page-images/chat.png" alt="comment">0
+                                                </span>
+                                            </div>
+
+                                            <h3>Stretching Exercises: Your Friendly Guide</h3>
+                                            <p>
+                                                Building the perfect workout routine is key if you want to get fitter,
+                                                boost your energy, or simply add a healthy habit.
+                                            </p>
+                                            <a href="#" class="read-more">Learn More <i
+                                                    class="fa-solid fa-arrow-right"></i>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- card-4 -->
+                                <div class="swiper-slide">
+                                    <div class="cmn-card">
+                                        <div class="card-img">
+                                            <img src="./images/home-page-images/featured-card-1.jpg"
+                                                alt="featured-card">
+                                            <span class="tag">Fitness</span>
+
+                                            <div class="icons">
+                                                <i class="fa-regular fa-bookmark bookmark"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-content">
+                                            <div class="meta">
+                                                <span><img src="./images/home-page-images/calendar (1).png"
+                                                        alt="calender">May 14,
+                                                    2025</span>
+                                                <span>
+                                                    <img src="./images/home-page-images/chat.png" alt="comment">0
+                                                </span>
+                                            </div>
+
+                                            <h3>Stretching Exercises: Your Friendly Guide</h3>
+                                            <p>
+                                                Building the perfect workout routine is key if you want to get fitter,
+                                                boost your energy, or simply add a healthy habit.
+                                            </p>
+                                            <a href="#" class="read-more">Learn More <i
+                                                    class="fa-solid fa-arrow-right"></i>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- card-5 -->
+                                <div class="swiper-slide">
+                                    <div class="cmn-card">
+                                        <div class="card-img">
+                                            <img src="./images/home-page-images/featured-card-1.jpg"
+                                                alt="featured-card">
+                                            <span class="tag">Fitness</span>
+
+                                            <div class="icons">
+                                                <i class="fa-regular fa-bookmark bookmark"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-content">
+                                            <div class="meta">
+                                                <span><img src="./images/home-page-images/calendar (1).png"
+                                                        alt="calender">May 14,
+                                                    2025</span>
+                                                <span>
+                                                    <img src="./images/home-page-images/chat.png" alt="comment">0
+                                                </span>
+                                            </div>
+
+                                            <h3>Stretching Exercises: Your Friendly Guide</h3>
+                                            <p>
+                                                Building the perfect workout routine is key if you want to get fitter,
+                                                boost your energy, or simply add a healthy habit.
+                                            </p>
+                                            <a href="#" class="read-more">Learn More <i
+                                                    class="fa-solid fa-arrow-right"></i>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- card-6 -->
+                                <div class="swiper-slide">
+                                    <div class="cmn-card">
+                                        <div class="card-img">
+                                            <img src="./images/home-page-images/featured-card-1.jpg"
+                                                alt="featured-card">
+                                            <span class="tag">Fitness</span>
+
+                                            <div class="icons">
+                                                <i class="fa-regular fa-bookmark bookmark"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-content">
+                                            <div class="meta">
+                                                <span><img src="./images/home-page-images/calendar (1).png"
+                                                        alt="calender">May 14,
+                                                    2025</span>
+                                                <span>
+                                                    <img src="./images/home-page-images/chat.png" alt="comment">0
+                                                </span>
+                                            </div>
+
+                                            <h3>Stretching Exercises: Your Friendly Guide</h3>
+                                            <p>
+                                                Building the perfect workout routine is key if you want to get fitter,
+                                                boost your energy, or simply add a healthy habit.
+                                            </p>
+                                            <a href="#" class="read-more">Learn More <i
+                                                    class="fa-solid fa-arrow-right"></i>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- swiper button -->
+                            <div class="custom-nav">
+                                <button class="custom-prev disabled">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </button>
+
+                                <button class="custom-next">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- featured-blogs-sec-ends -->
+
+        <!-- our story sec start -->
+        <section class="our-story-sec cmn-gap">
+            <div class="container">
+                <div class="our-story-child">
+                    <div class="story-left">
+                        <div class="story-inner-text">
+                            <span class="primary-color-text">our story</span>
+                            <h2>what the professionals say about better being.</h2>
+                            <p>"In a world overwhelmed by conflicting and often misleading health information, Better
+                                Being
+                                stands out as a beacon of clarity. The content is rigorously reviewed, highly
+                                actionable,
+                                and genuinely focuses on the holistic wellness journey. Their commitment to covering the
+                                full spectrum of health—from Diet to Personalized Wellness—makes them an essential
+                                resource.
+                                I confidently recommend Better Being to anyone serious about achieving sustainable
+                                health
+                                and clarity."</p>
+                            <div class="profile">
+                                <div class="profile-img">
+                                    <img src="./images/our-story-profile-img.png" alt="profile-img">
+                                </div>
+                                <div class="profile-perent">
+                                    <h3 class="heading-4">dr. ananda</h3>
+                                    <span class="primary-color-text">author</span>
+                                </div>
+                            </div>
+                            <a href="#" class="our-story-btn cmn-btn">read more</a>
+                        </div>
+                    </div>
+                    <div class="story-right">
+                        <div class="story-img">
+                            <img src="./images/our-story-img.png" alt="our-story-img">
+                        </div>
+                        <div class="overlay-img">
+                            <img src="./images/our-story-overlay-img.png" alt="overlay-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- our story sec end -->
+
+        <!-- latest blog sec starts -->
+        <section class="latest-blog-sec cmn-gap">
+            <div class="container">
+                <div class="latest-blog-child">
+                    <div class="featured-blog-child">
+                        <div class="latest-blogs-title">
+                            <h2 class="section-title">latest Blogs</h2>
+                            <a href="#" class="show-all-text primary-color-text">show all<i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="featured-card-sec">
+                            <!-- card-1 -->
+                            <div class="cmn-card">
+                                <div class="card-img">
+                                    <img src="./images/home-page-images/featured-card-1.jpg" alt="featured-card">
+                                    <span class="tag">Fitness</span>
+
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark bookmark"></i>
+                                    </div>
+                                </div>
+
+                                <div class="card-content">
+                                    <div class="meta">
+                                        <span><img src="./images/home-page-images/calendar (1).png" alt="calender">May
+                                            14,
+                                            2025</span>
+                                        <span>
+                                            <img src="./images/home-page-images/chat.png" alt="comment">0
+                                        </span>
+                                    </div>
+
+                                    <h3>Stretching Exercises: Your Friendly Guide</h3>
+                                    <p>
+                                        Building the perfect workout routine is key if you want to get
+                                        fitter,
+                                        boost your energy, or simply add a healthy habit.
+                                    </p>
+                                    <a href="#" class="read-more">Learn More <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- card-2 -->
+                            <div class="cmn-card">
+                                <div class="card-img">
+                                    <img src="./images/home-page-images/featured-card-1.jpg" alt="featured-card">
+                                    <span class="tag">Fitness</span>
+
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark bookmark"></i>
+                                    </div>
+                                </div>
+
+                                <div class="card-content">
+                                    <div class="meta">
+                                        <span><img src="./images/home-page-images/calendar (1).png" alt="calender">May
+                                            14,
+                                            2025</span>
+                                        <span>
+                                            <img src="./images/home-page-images/chat.png" alt="comment">0
+                                        </span>
+                                    </div>
+
+                                    <h3>Stretching Exercises: Your Friendly Guide</h3>
+                                    <p>
+                                        Building the perfect workout routine is key if you want to get
+                                        fitter,
+                                        boost your energy, or simply add a healthy habit.
+                                    </p>
+                                    <a href="#" class="read-more">Learn More <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- card-3 -->
+                            <div class="cmn-card">
+                                <div class="card-img">
+                                    <img src="./images/home-page-images/featured-card-1.jpg" alt="featured-card">
+                                    <span class="tag">Fitness</span>
+
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark bookmark"></i>
+                                    </div>
+                                </div>
+
+                                <div class="card-content">
+                                    <div class="meta">
+                                        <span><img src="./images/home-page-images/calendar (1).png" alt="calender">May
+                                            14,
+                                            2025</span>
+                                        <span>
+                                            <img src="./images/home-page-images/chat.png" alt="comment">0
+                                        </span>
+                                    </div>
+
+                                    <h3>Stretching Exercises: Your Friendly Guide</h3>
+                                    <p>
+                                        Building the perfect workout routine is key if you want to get
+                                        fitter,
+                                        boost your energy, or simply add a healthy habit.
+                                    </p>
+                                    <a href="#" class="read-more">Learn More <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- latest blog sec ends -->
+
+        <!-- reach-out-sec-start -->
+        <section class="reach-out-sec cmn-gap">
+            <div class="container">
+                <div class="reach-out-child">
+                    <div class="reach-out-left">
+                        <div class="reach-out-img">
+                            <figure><img src="./images/home-page-images/reach-out-img.png" alt="reach-out-img"></figure>
+                        </div>
+                    </div>
+                    <div class="reach-out-right">
+                        <div class="right-sec-inner-text">
+                            <h2>from you to the world</h2>
+                            <span class="primary-color-text">pen your perspective</span>
+                            <p class="text-paragraph-1">
+                                Turn your thoughts into words and let your voice reach beyond the screen. This space is
+                                for readers who have meaningful ideas, experiences, or insights to share. Whether it’s a
+                                personal reflection, a lesson learned, or a perspective worth exploring, your words can
+                                inspire and connect with others.
+                            </p>
+                            <p class="text-paragraph-2">
+                               Writing is a powerful way to express yourself and contribute to conversations that matter. There’s no pressure for perfection—only an invitation to be honest and authentic. Every voice adds value here. Start writing, share your story, and become part of a growing community built on thoughtful expression.
+                            </p>
+                            <div class="reach-btn">
+                                <a href="#" class="cmn-btn reach-out-btn"> reach out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- reach-out-sec-end -->
+
+
+        <!-- community sec start -->
+        <section class="community-sec cmn-gap">
+            <div class="container">
+                <div class="community-child">
+                    <div class="community-left">
+                        <div class="community-img">
+                            <img src="./images/community-img.png" alt="community-img">
+                        </div>
+                    </div>
+                    <div class="community-right">
+                        <div class="community-inner-text">
+                            <h2>a growing community focused on your health</h2>
+                            <p>We provide clear, actionable wellness strategies across seven core pillars to positively
+                                impact your daily life and long-term health.</p>
+                            <div class="community-lower-sec">
+                                <!-- blogs -->
+                                <div class="community-blogs-text">
+                                    <div class="community-icon">
+                                        <img src="./images/blog-icon.svg" alt="icon">
+                                        <h3 class="heading-2">30+</h3>
+                                    </div>
+                                    <div class="community-text">blogs</div>
+                                </div>
+                                <!-- Author -->
+                                <div class="community-blogs-text">
+                                    <div class="community-icon">
+                                        <img src="./images/author-icon.svg" alt="icon">
+                                        <h3 class="heading-2">25+</h3>
+                                    </div>
+                                    <div class="community-text">author</div>
+                                </div>
+                                <!-- readers -->
+                                <div class="community-blogs-text">
+                                    <div class="community-icon">
+                                        <img src="./images/reader-icon.svg" alt="icon">
+                                        <h3 class="heading-2">2k+</h3>
+                                    </div>
+                                    <div class="community-text">readers</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- community sec end -->
+
+
+
+
+    </main>
+
+
+
+
+    <!------ footer-sec-starts ------>
+    <footer class="footer-sec">
+        <div class="container">
+            <!-- Top Support Section -->
+            <div class="footer-top">
+                <div class="footer-heading heading-3">Stay Healthy & Informed: Subscribe to Our Newsletter</div>
+                <p class="heading-6">Get the latest insights, recipes, and expert advice delivered straight to your
+                    inbox every week. We
+                    cover everything
+                    from mental clarity to fitness routines to help you live a balanced, vibrant life.</p>
+                <form class="subscribe-form">
+                    <span class="mail-icon">✉</span>
+                    <input type="email" class="subscribe-input" placeholder="Enter your mail" required />
+                    <button class="subscribe-btn cmn-btn">Subscribe</button>
+                </form>
+            </div>
+
+            <!-- Bottom Footer Columns -->
+            <div class="footer-child">
+                <!-- footer-1 -->
+                <div class="cmn-footer footer-1">
+                    <a href="./index.html" class="footer-logo"><img src="./images/footer-logo.png" alt=""></a>
+                    <p class="footer-text">Welcome to Better Being! Here, you can explore insightful articles and blogs
+                        covering fitness.
+                    </p>
+                </div>
+                <!-- footer-2 -->
+                <div class="cmn-footer">
+                    <div class="footer-heading">Quick links</div>
+                    <ul class="footer-links">
+                        <li><a href="./about_us.html">About Us</a></li>
+                        <li><a href="./blog_list.html">Blog List</a></li>
+                        <li><a href="./contact_us.html">bookmarks</a></li>
+                        <li><a href="./faq_page.html">FAQs</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <!-- footer-3 -->
+                <div class="cmn-footer">
+                    <div class="footer-heading">Support</div>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fa-solid fa-phone phone-icon"></i>+(555) 012-3456</a></li>
+                        <li><a href="#"><i class="fa-solid fa-envelope email-icon"></i> betterbeing@gmail.com </a></li>
+                    </ul>
+                </div>
+                <!-- footer-4 -->
+                <div class="cmn-footer newsletter">
+                    <div class="footer-heading">social media</div>
+                    <ul class="social-icons">
+                        <li> <a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li> <a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li> <a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li> <a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-end">
+                <div class="copy-right">copyright<i class="fa-regular fa-copyright copyright-icon"></i>2025 <a
+                        href="./index.html" class="brand-a">betterbeing</a><span class="reserved-text"> all rights
+                        reserved</span></div>
+            </div>
+        </div>
+    </footer>
+    <!-- ---- footer-sec-ends ---- -->
+
+
+
+
+
+
+
+    <!-- slick cdn js -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- swiper js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- j-query cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper', {
+            slidesPerView: 3,
+            direction: getDirection(),
+            navigation: {
+                nextEl: ".custom-next",
+                prevEl: ".custom-prev",
+            },
+            on: {
+                init: function () {
+                    toggleButtons(this);
+                },
+                slideChange: function () {
+                    toggleButtons(this);
+                }
+            }
+        });
+
+        function getDirection() {
+            var windowWidth = window.innerWidth;
+            var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+            return direction;
+        }
+        function toggleButtons(swiper) {
+            const prevBtn = document.querySelector(".custom-prev");
+            const nextBtn = document.querySelector(".custom-next");
+
+            // First slide
+            if (swiper.isBeginning) {
+                prevBtn.classList.add("disabled");
+            } else {
+                prevBtn.classList.remove("disabled");
+            }
+
+            // Last slide
+            if (swiper.isEnd) {
+                nextBtn.classList.add("disabled");
+            } else {
+                nextBtn.classList.remove("disabled");
+            }
+        }
+    </script>
+
+    <!-- j-query js -->
+    <script>
+        $(document).ready(function () {
+
+            let texts = [
+                "Meditation is the delicate art of doing nothing",
+                "We create responsive designs",
+                "We deliver quality projects",
+                "Your success is our priority"
+            ];
+
+            let index = 1;
+
+            setInterval(function () {
+                $("#dynamicText").fadeOut(800, function () {
+                    index = (index + 1) % texts.length;
+                    $(this).text(texts[index]).fadeIn(800);
+                });
+            }, 3000);
+
+        });
+        $(document).ready(function () {
+
+            let texts = [
+                "- Sri Sri Ravi Shankar",
+                "We create responsive designs",
+                "We deliver quality projects",
+                "Your success is our priority"
+            ];
+
+            let index = 1;
+
+            setInterval(function () {
+                $("#dynamicsubText").fadeOut(800, function () {
+                    index = (index + 1) % texts.length;
+                    $(this).text(texts[index]).fadeIn(800);
+                });
+            }, 3000);
+
+        });
+    </script>
+
 
 </body>
 
