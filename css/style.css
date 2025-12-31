@@ -561,8 +561,142 @@ p,
 
 /* featured-blog-sec-ends */
 
+/* our story sec start */
+.our-story-sec {
+    background-color: var(--text-primary-color);
+}
+
+.our-story-child {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.story-left,
+.story-right {
+    width: 50%;
+    padding: 0 15px;
+}
+
+.profile-img img {
+    height: 100px;
+    width: 100px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.story-left p {
+    margin-bottom: 25px;
+}
+
+.profile-perent span {
+    font-size: 16px;
+    color: #0822197a;
+}
+
+.overlay-img img {
+    height: 221px;
+    width: 221px;
+    position: absolute;
+    right: -20px;
+    bottom: -10px;
+}
+
+.story-right {
+    position: relative;
+}
+
+/* our story sec end */
 
 
+/* community sec start */
+.community-sec {
+    background-color: var(--text-primary-color);
+    position: relative;
+}
+
+.community-child {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #3B5638;
+    height: 395px;
+    border-radius: 20px;
+    margin: 0 -15px;
+}
+
+.community-left,
+.community-right {
+    width: 50%;
+    padding: 0 15px;
+}
+
+.community-left {
+    position: relative;
+}
+
+.community-img img {
+    height: 487px;
+    width: 498px;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+
+.community-inner-text {
+    padding: 50px 70px 50px 0;
+}
+
+.community-right h2 {
+    color: var(--text-primary-color);
+    font-size: 36px;
+}
+
+.community-right p {
+    color: #d1fccc87;
+    margin-bottom: 20px;
+}
+
+.community-icon img {
+    height: 35px;
+    width: 35px;
+    display: block;
+    margin-right: 10px;
+}
+
+.community-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.community-text {
+    text-align: center;
+    color: var(--text-primary-color);
+    text-transform: capitalize;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.community-lower-sec {
+    display: flex;
+}
+
+.community-blogs-text {
+    margin-right: 70px;
+}
+
+.community-icon h3 {
+    margin-bottom: 0;
+    color: var(--text-primary-color);
+    font-weight: 600;
+}
+
+/* community sec end */
 
 
 
