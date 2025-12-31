@@ -2,214 +2,354 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Blog Card</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-        body {
-            background: #f4f6f8;
-            padding: 40px;
-        }
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-        .card {
-            width: 360px;
-            background: #fff;
-            border-radius: 14px;
-            overflow: hidden;
-            cursor: pointer;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            transition: 0.3s;
-        }
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- index-page-css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- blog-page-css -->
+    <link rel="stylesheet" href="./css/blog.css">
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card-img {
-            position: relative;
-        }
-
-        .card-img img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .tag {
-            position: absolute;
-            top: 12px;
-            left: 12px;
-            background: #2ecc71;
-            color: #fff;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-        }
-
-        .icons {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-        }
-
-        .icons i {
-            background: #fff;
-            padding: 8px;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-
-        .bookmark.active {
-            color: #f39c12;
-        }
-
-        .card-content {
-            padding: 18px;
-        }
-
-        .meta {
-            display: flex;
-            justify-content: space-between;
-            font-size: 13px;
-            color: #777;
-            margin-bottom: 10px;
-        }
-
-        .meta span {
-            cursor: pointer;
-        }
-
-        .card-content h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .card-content p {
-            font-size: 14px;
-            color: #555;
-            line-height: 1.5;
-        }
-
-        .read-more {
-            display: inline-block;
-            margin-top: 12px;
-            color: #000;
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        /* Popup */
-        .comment-popup {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.6);
-            display: none;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .popup-box {
-            background: #fff;
-            padding: 20px;
-            width: 300px;
-            border-radius: 10px;
-        }
-
-        .popup-box textarea {
-            width: 100%;
-            height: 80px;
-            margin-top: 10px;
-        }
-
-        .popup-btns {
-            display: flex;
-            justify-content: flex-end;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .popup-btns button {
-            padding: 6px 12px;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
 </head>
 
 <body>
+    <!-- header-sec-starts -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav-bar">
+                <a href="./index.html" class="nav-logo"><img src="./images/nav-logo.png" alt="main-logo"></a>
+                <ul class="nav-links">
+                    <li><a href="./index.html">home</a></li>
+                    <li><a href="./about_us.html">about us</a></li>
+                    <li><a href="./blog_list.html" class="active-page-select">blog list</a></li>
+                    <li><a href="./bookmarks.html">bookmarks</a></li>
+                    <li><a href="./faq_page.html">FAQs</a></li>
+                    <li><a href="./contact_us.html">contact us</a></li>
+                </ul>
+                <div class="nav-right">
+                    <div class="nav-right-2">
+                        <a href="#" class="search-icon"><img src="./images/home-page-images/search.png"
+                                alt="search"></a>
+                        <a href="./login.html" class="user-signup"><img src="./images/home-page-images/user.png"
+                                alt="signup"></a>
+                        <a href="./signup.html" class="cmn-btn">sign up</a>
+                    </div>
+                    <!-- <a class="menu-bar" id="menu-bar"><i class="fa-solid fa-bars"></i></a> -->
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- header-sec-ends -->
 
-    <div class="card" onclick="goToPage()">
-        <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74" alt="">
-            <span class="tag">Fitness</span>
+    <main>
+        <!-- banner-sec-starts -->
+        <section class="banner-sec">
+            <div class="container">
+                <div class="banner-child">
+                    <h1>Blog List</h1>
+                    <p>Stay ahead of the curve with deep dives and analysis from industry leaders.Dive into our latest
+                        articles
+                        covering everything you need to know now.</p>
+                </div>
+            </div>
+        </section>
+        <!-- LATEST ARTICLES SECTION -->
+        <section class="blog-sec">
+            <div class="container">
 
-            <div class="icons">
-                <i class="fa-regular fa-bookmark bookmark" onclick="bookmark(event)"></i>
+                <div class="blog-header">
+                    <span class="blog-subtitle">Latest Articles</span>
+                    <h2 class="title-2">Health And Wellness Articles</h2>
+                </div>
+
+                <!-- CATEGORY FILTER -->
+                <div class="blog-filter">
+                    <ul>
+                        <li class="filter-item">All</li>
+                        <li class="filter-item active">Nutrition</li>
+                        <li class="filter-item">Fitness</li>
+                        <li class="filter-item">Mental Wellness</li>
+                        <li class="filter-item">Preventive Care</li>
+                        <li class="filter-item">Alternative Therapy</li>
+                        <li class="filter-item">Sleep Health</li>
+                        <li class="filter-item">Personal Awareness</li>
+                        <li class="filter-item">Extended Care</li>
+                    </ul>
+                </div>
+
+                <div class="featured-card-sec">
+                    <!-- card-1 -->
+                    <div class="cmn-card">
+                        <div class="card-img">
+                            <img src="./images/home-page-images/featured-card-1.jpg" alt="featured-card">
+                            <span class="tag">Fitness</span>
+
+                            <div class="icons">
+                                <i class="fa-regular fa-bookmark bookmark"></i>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <div class="meta">
+                                <span><img src="./images/home-page-images/calendar (1).png" alt="calender">May
+                                    14,
+                                    2025</span>
+                                <span>
+                                    <img src="./images/home-page-images/chat.png" alt="comment">0
+                                </span>
+                            </div>
+
+                            <h3>Stretching Exercises: Your Friendly Guide</h3>
+                            <p>
+                                Building the perfect workout routine is key if you want to get
+                                fitter,
+                                boost your energy, or simply add a healthy habit.
+                            </p>
+                            <a href="#" class="read-more">Learn More <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!-- card-2 -->
+                    <div class="cmn-card">
+                        <div class="card-img">
+                            <img src="./images/home-page-images/featured-card-1.jpg" alt="featured-card">
+                            <span class="tag">Fitness</span>
+
+                            <div class="icons">
+                                <i class="fa-regular fa-bookmark bookmark"></i>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <div class="meta">
+                                <span><img src="./images/home-page-images/calendar (1).png" alt="calender">May
+                                    14,
+                                    2025</span>
+                                <span>
+                                    <img src="./images/home-page-images/chat.png" alt="comment">0
+                                </span>
+                            </div>
+
+                            <h3>Stretching Exercises: Your Friendly Guide</h3>
+                            <p>
+                                Building the perfect workout routine is key if you want to get
+                                fitter,
+                                boost your energy, or simply add a healthy habit.
+                            </p>
+                            <a href="#" class="read-more">Learn More <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!-- card-3 -->
+                    <div class="cmn-card">
+                        <div class="card-img">
+                            <img src="./images/home-page-images/featured-card-1.jpg" alt="featured-card">
+                            <span class="tag">Fitness</span>
+
+                            <div class="icons">
+                                <i class="fa-regular fa-bookmark bookmark"></i>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <div class="meta">
+                                <span><img src="./images/home-page-images/calendar (1).png" alt="calender">May
+                                    14,
+                                    2025</span>
+                                <span>
+                                    <img src="./images/home-page-images/chat.png" alt="comment">0
+                                </span>
+                            </div>
+
+                            <h3>Stretching Exercises: Your Friendly Guide</h3>
+                            <p>
+                                Building the perfect workout routine is key if you want to get
+                                fitter,
+                                boost your energy, or simply add a healthy habit.
+                            </p>
+                            <a href="#" class="read-more">Learn More <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!-- card-1 -->
+                    <div class="cmn-card">
+                        <div class="card-img">
+                            <img src="./images/home-page-images/featured-card-1.jpg" alt="featured-card">
+                            <span class="tag">Fitness</span>
+
+                            <div class="icons">
+                                <i class="fa-regular fa-bookmark bookmark"></i>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <div class="meta">
+                                <span><img src="./images/home-page-images/calendar (1).png" alt="calender">May
+                                    14,
+                                    2025</span>
+                                <span>
+                                    <img src="./images/home-page-images/chat.png" alt="comment">0
+                                </span>
+                            </div>
+
+                            <h3>Stretching Exercises: Your Friendly Guide</h3>
+                            <p>
+                                Building the perfect workout routine is key if you want to get
+                                fitter,
+                                boost your energy, or simply add a healthy habit.
+                            </p>
+                            <a href="#" class="read-more">Learn More <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!-- card-2 -->
+                    <div class="cmn-card">
+                        <div class="card-img">
+                            <img src="./images/home-page-images/featured-card-1.jpg" alt="featured-card">
+                            <span class="tag">Fitness</span>
+
+                            <div class="icons">
+                                <i class="fa-regular fa-bookmark bookmark"></i>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <div class="meta">
+                                <span><img src="./images/home-page-images/calendar (1).png" alt="calender">May
+                                    14,
+                                    2025</span>
+                                <span>
+                                    <img src="./images/home-page-images/chat.png" alt="comment">0
+                                </span>
+                            </div>
+
+                            <h3>Stretching Exercises: Your Friendly Guide</h3>
+                            <p>
+                                Building the perfect workout routine is key if you want to get
+                                fitter,
+                                boost your energy, or simply add a healthy habit.
+                            </p>
+                            <a href="#" class="read-more">Learn More <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!-- card-3 -->
+                    <div class="cmn-card">
+                        <div class="card-img">
+                            <img src="./images/home-page-images/featured-card-1.jpg" alt="featured-card">
+                            <span class="tag">Fitness</span>
+
+                            <div class="icons">
+                                <i class="fa-regular fa-bookmark bookmark"></i>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <div class="meta">
+                                <span><img src="./images/home-page-images/calendar (1).png" alt="calender">May
+                                    14,
+                                    2025</span>
+                                <span>
+                                    <img src="./images/home-page-images/chat.png" alt="comment">0
+                                </span>
+                            </div>
+
+                            <h3>Stretching Exercises: Your Friendly Guide</h3>
+                            <p>
+                                Building the perfect workout routine is key if you want to get
+                                fitter,
+                                boost your energy, or simply add a healthy habit.
+                            </p>
+                            <a href="#" class="read-more">Learn More <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- footer-sec-starts -->
+    <footer class="footer-sec">
+        <div class="container">
+            <!-- Top Support Section -->
+            <div class="footer-top">
+                <div class="footer-heading heading-3">Stay Healthy & Informed: Subscribe to Our Newsletter</div>
+                <p class="heading-6">Get the latest insights, recipes, and expert advice delivered straight to your
+                    inbox every week. We
+                    cover everything
+                    from mental clarity to fitness routines to help you live a balanced, vibrant life.</p>
+                <form class="subscribe-form">
+                    <span class="mail-icon">✉</span>
+                    <input type="email" class="subscribe-input" placeholder="Enter your mail" required />
+                    <button class="subscribe-btn cmn-btn">Subscribe</button>
+                </form>
+            </div>
+
+            <!-- Bottom Footer Columns -->
+            <div class="footer-child">
+                <!-- footer-1 -->
+                <div class="cmn-footer footer-1">
+                    <a href="./index.html" class="footer-logo"><img src="./images/footer-logo.png" alt=""></a>
+                    <p class="footer-text">Welcome to Better Being! Here, you can explore insightful articles and blogs
+                        covering fitness.
+                    </p>
+                </div>
+                <!-- footer-2 -->
+                <div class="cmn-footer">
+                    <div class="footer-heading">Quick links</div>
+                    <ul class="footer-links">
+                        <li><a href="./about_us.html">About Us</a></li>
+                        <li><a href="./blog_list.html">Blog List</a></li>
+                        <li><a href="./contact_us.html">bookmarks</a></li>
+                        <li><a href="./faq_page.html">FAQs</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <!-- footer-3 -->
+                <div class="cmn-footer">
+                    <div class="footer-heading">Support</div>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fa-solid fa-phone phone-icon"></i>+(555) 012-3456</a></li>
+                        <li><a href="#"><i class="fa-solid fa-envelope email-icon"></i> betterbeing@gmail.com </a></li>
+                    </ul>
+                </div>
+                <!-- footer-4 -->
+                <div class="cmn-footer newsletter">
+                    <div class="footer-heading">social media</div>
+                    <ul class="social-icons">
+                        <li> <a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li> <a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li> <a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li> <a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-end">
+                <div class="copy-right">copyright<i class="fa-regular fa-copyright copyright-icon"></i>2025 <a
+                        href="./index.html" class="brand-a">betterbeing</a><span class="reserved-text"> all rights
+                        reserved</span></div>
             </div>
         </div>
-
-        <div class="card-content">
-            <div class="meta">
-                <span><i class="fa-regular fa-calendar"></i> May 14, 2025</span>
-                <span onclick="openComment(event)">
-                    <i class="fa-regular fa-comment"></i> 0
-                </span>
-            </div>
-
-            <h3>Stretching Exercises: Your Friendly Guide</h3>
-            <p>
-                Building the perfect workout routine is key if you want to get fitter,
-                boost your energy, or simply add a healthy habit.
-            </p>
-
-            <a href="#" class="read-more">Learn More →</a>
-        </div>
-    </div>
-
-    <!-- Comment Popup -->
-    <div class="comment-popup" id="commentPopup">
-        <div class="popup-box">
-            <h3>Leave a Comment</h3>
-            <textarea placeholder="Write your comment..."></textarea>
-            <div class="popup-btns">
-                <button onclick="closeComment()">Cancel</button>
-                <button>Submit</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-
-
-
-    <script>
-        function goToPage() {
-            window.location.href = "details.html";
-        }
-
-        function bookmark(e) {
-            e.stopPropagation();
-            e.target.classList.toggle("active");
-        }
-
-        function openComment(e) {
-            e.stopPropagation();
-            document.getElementById("commentPopup").style.display = "flex";
-        }
-
-        function closeComment() {
-            document.getElementById("commentPopup").style.display = "none";
-        }
-
-    </script>
+    </footer>
+    <!-- footer-sec-ends -->
 </body>
 
 </html>
