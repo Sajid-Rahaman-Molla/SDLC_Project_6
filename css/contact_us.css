@@ -316,16 +316,19 @@ p,
   margin-bottom: 10px;
 }
 
-.contact-info li a {
-  color: var(--dark-color);
-  margin-bottom: 60px;
+.contact-info li {
+  margin-bottom: 54px;
 }
-.fast-contact-info {
+.contact-info li a{
+  color: var(--dark-color);
+}
+
+/* .fast-contact-info {
   margin-bottom: 84px;
 }
 .second-contact-info {
   margin-bottom: 84px;
-}
+} */
 /* right column */
 .right-column {
   width: 60%;
