@@ -20,7 +20,7 @@
 
 <body>
     <!-- header-sec-starts -->
-    <header class="header">
+     <header class="header">
         <div class="container">
             <nav class="nav-bar">
                 <a href="./index.html" class="nav-logo"><img src="./images/nav-logo.png" alt="main-logo"></a>
@@ -34,8 +34,10 @@
                 </ul>
                 <div class="nav-right">
                     <div class="nav-right-2">
-                        <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        <a href="./login.html" class="user-signup"><i class="fa-solid fa-user-plus"></i></a>
+                        <a href="#" class="search-icon"><img src="./images/home-page-images/search.png"
+                                alt="search"></a>
+                        <a href="./login.html" class="user-signup"><img src="./images/home-page-images/user.png"
+                                alt="signup"></a>
                         <a href="./signup.html" class="cmn-btn">sign up</a>
                     </div>
                     <!-- <a class="menu-bar" id="menu-bar"><i class="fa-solid fa-bars"></i></a> -->
@@ -150,7 +152,7 @@
                                 <div class="community-blogs-text">
                                     <div class="community-icon">
                                         <img src="./images/blog-icon.svg" alt="icon">
-                                        <h3 class="heading-2">30+</h3>
+                                        <span class="count" data-target="30">0</span><span class="plus">+</span>
                                     </div>
                                     <div class="community-text">blogs</div>
                                 </div>
@@ -158,7 +160,7 @@
                                 <div class="community-blogs-text">
                                     <div class="community-icon">
                                         <img src="./images/author-icon.svg" alt="icon">
-                                        <h3 class="heading-2">25+</h3>
+                                        <span class="count" data-target="25">0</span><span class="plus">+</span>
                                     </div>
                                     <div class="community-text">author</div>
                                 </div>
@@ -166,7 +168,7 @@
                                 <div class="community-blogs-text">
                                     <div class="community-icon">
                                         <img src="./images/reader-icon.svg" alt="icon">
-                                        <h3 class="heading-2">2k+</h3>
+                                        <span class="count" data-target="2000">0</span><span class="plus">+</span>
                                     </div>
                                     <div class="community-text">readers</div>
                                 </div>
@@ -382,6 +384,46 @@
         </div>
     </footer>
     <!-- ---- footer-sec-ends ---- -->
+
+
+
+
+
+
+
+
+    <!-- community sec js -->
+    <script>
+        const counters = document.querySelectorAll(".count");
+
+        counters.forEach(counter => {
+            const target = Number(counter.dataset.target);
+            let current = 0;
+            const duration = 2000; // 2 seconds
+            const step = target / (duration / 16); // ~60fps
+
+            function update() {
+                current += step;
+
+                if (current < target) {
+                    counter.textContent = formatK(current);
+                    requestAnimationFrame(update);
+                } else {
+                    counter.textContent = formatK(target);
+                }
+            }
+
+            update();
+        });
+
+        function formatK(value) {
+            if (value >= 2000) {
+                return Math.floor(value / 1000) + "k";
+            }
+            return Math.floor(value);
+        }
+    </script>
+
 </body>
 
 </html>
