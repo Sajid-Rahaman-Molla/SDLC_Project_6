@@ -598,12 +598,16 @@ p,
     color: #0822197a;
 }
 
+.overlay-img {
+    right: -67px;
+    bottom: -43px;
+    position: absolute;
+}
+
+
 .overlay-img img {
     height: 221px;
     width: 221px;
-    position: absolute;
-    right: -20px;
-    bottom: -10px;
 }
 
 .story-right {
@@ -698,9 +702,85 @@ p,
 
 /* community sec end */
 
+/* latest-blog-sec-starts */
+.featured-card-sec {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.latest-blog-sec .cmn-card {
+    width: calc(33.33% - 20px);
+}
+
+.latest-blog-sec .featured-card-sec {
+    margin: 0;
+}
+
+.latest-blogs-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.show-all-text {
+    font-size: 20px;
+    transition: var(--default-animation);
+    margin: 0;
+}
+
+.show-all-text i {
+    margin-left: 7px;
+}
+
+.show-all-text:hover {
+    color: var(--text-dark-color);
+}
+
+/* latest-blog-sec-ends */
+
+/* reach-out-sec-starts */
+.reach-out-child {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    align-items: center;
+}
+
+.reach-out-left,
+.reach-out-right {
+    width: 50%;
+    padding: 0 15px;
+}
+
+.reach-out-left img {
+    display: block;
+}
+
+.reach-out-right h2 {
+    margin-bottom: 5px;
+}
+
+.reach-out-right span {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.text-paragraph-1 {
+    margin-bottom: 10px;
+}
+
+.text-paragraph-2 {
+    margin-bottom: 30px;
+}
+
+.reach-out-right p {
+    color: #082219;
+    line-height: 1.5;
+}
 
 
-
+/* reach-out-sec-ends */
 
 
 
@@ -725,14 +805,16 @@ p,
 
 .footer-heading {
     color: var(--text-primary-color);
-    margin-bottom: 20px;
-    font-size: 26px;
+    margin-bottom: 24px;
+    font-size: 24px;
     text-transform: capitalize;
+    font-weight: 550;
 }
 
 .footer-top p {
     color: var(--text-primary-color);
     margin-bottom: 32px;
+    line-height: 1.5;
 }
 
 .subscribe-wrapper {
@@ -751,7 +833,7 @@ p,
 }
 
 .mail-icon {
-    font-size: 25px;
+    font-size: 30px;
     padding: 5px;
     color: #666;
 }
@@ -759,12 +841,13 @@ p,
 .subscribe-input {
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 18px;
     padding: 0 8px;
 }
 
 .subscribe-input::placeholder {
     color: #999;
+    text-transform: capitalize;
 }
 
 .subscribe-btn {
@@ -834,6 +917,7 @@ p,
 .footer-text {
     color: var(--text-primary-color);
     line-height: 1.3;
+    max-width: 70%;
 }
 
 .footer-logo {
