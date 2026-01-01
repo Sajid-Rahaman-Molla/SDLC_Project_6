@@ -141,8 +141,8 @@
     color: #0822197a;
 }
 
-.overlay-img{
-position: relative;
+.overlay-img {
+    position: relative;
 
 }
 
@@ -238,12 +238,19 @@ position: relative;
     margin-right: 70px;
 }
 
-.count,.plus {
+.count,
+.plus {
     color: var(--text-primary-color);
     font-size: 48px;
     font-weight: 600;
     font-family: 'Times New Roman', Times, serif;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+.count.animate {
+    transform: translateY(-5px);
+}
+
 
 /* community sec end */
 /* our expertise sec start */

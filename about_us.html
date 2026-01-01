@@ -20,7 +20,7 @@
 
 <body>
     <!-- header-sec-starts -->
-     <header class="header">
+    <header class="header">
         <div class="container">
             <nav class="nav-bar">
                 <a href="./index.html" class="nav-logo"><img src="./images/nav-logo.png" alt="main-logo"></a>
@@ -393,36 +393,84 @@
 
 
     <!-- community sec js -->
-    <script>
-        const counters = document.querySelectorAll(".count");
+  <script>
+  const section = document.querySelector(".community-sec");
+  const counters = document.querySelectorAll(".count");
+  let started = false;
 
-        counters.forEach(counter => {
-            const target = Number(counter.dataset.target);
-            let current = 0;
-            const duration = 2000; // 2 seconds
-            const step = target / (duration / 16); // ~60fps
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !started) {
+      started = true;
+      setTimeout(startCounters, 800);
+    }
+  });
 
-            function update() {
-                current += step;
+  observer.observe(section);
 
-                if (current < target) {
-                    counter.textContent = formatK(current);
-                    requestAnimationFrame(update);
-                } else {
-                    counter.textContent = formatK(target);
-                }
-            }
+  function startCounters() {
+    counters.forEach(counter => {
+      const target = Number(counter.dataset.target);
 
-            update();
-        });
+      if (target === 2000) {
+        counter2000(counter);
+      } else {
+        counterSmall(counter, target);
+      }
+    });
+  }
 
-        function formatK(value) {
-            if (value >= 2000) {
-                return Math.floor(value / 1000) + "k";
-            }
-            return Math.floor(value);
-        }
-    </script>
+  /* ---------- 30 / 25 ---------- */
+  function counterSmall(el, target) {
+    let value = 0;
+
+    function step() {
+      animate(el, value);
+      if (value === target) return;
+
+      value++;
+      setTimeout(step, 120);
+    }
+
+    step();
+  }
+
+  /* ---------- 2000 ---------- */
+  function counter2000(el) {
+    let value = 0;
+
+    function step() {
+      // phase 1: 0 → 1000
+      if (value < 1000) {
+        animate(el, value);
+        value += 20;
+      }
+      // phase 2: 1.1k → 2.0k
+      else if (value < 2000) {
+        value += 100;
+        animate(el, (value / 1000).toFixed(1) + "k");
+      }
+      // end
+      else {
+        animate(el, "2k");
+        return;
+      }
+
+      setTimeout(step, 70);
+    }
+
+    step();
+  }
+
+  /* ---------- animation helper ---------- */
+  function animate(el, val) {
+    el.classList.add("animate");
+    setTimeout(() => {
+      el.textContent = val;
+      el.classList.remove("animate");
+    }, 120);
+  }
+</script>
+
 
 </body>
 
