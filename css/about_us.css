@@ -14,9 +14,9 @@
 }
 
 .banner-child p {
-    width: 70%;
+    width: 60%;
     margin: auto;
-    color: var(--text-primary-color);
+    color: rgba(255, 255, 255, 0.65);
 }
 
 /* banner-sec-ends */
@@ -55,7 +55,7 @@
     left: 100px;
     width: 568px;
     height: 261px;
-    background: url(../images/nav-logo.png);
+    background: url(../images/about-bg-img.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -65,6 +65,10 @@
 
 .about-text-1 {
     margin-bottom: 25px;
+}
+
+.about-inner-text p{
+    color: rgba(0, 0, 0, 0.8);
 }
 
 .about-left {
@@ -134,6 +138,7 @@
 
 .story-left p {
     margin-bottom: 25px;
+    color: rgba(8, 34, 25, 0.5);
 }
 
 .profile-perent span {
@@ -204,7 +209,7 @@
 }
 
 .community-right p {
-    color: #d1fccc87;
+    color: rgba(209, 252, 204, 0.5);
     margin-bottom: 20px;
 }
 
@@ -271,7 +276,7 @@
 
 .expertise-left p {
     margin-bottom: 45px;
-    color: #08221978;
+    color: rgba(8, 34, 25, 0.5);
     width: 90%;
 }
 
