@@ -402,6 +402,10 @@ form input::placeholder{
   border-radius: 10px;
   cursor: pointer;
 }
+ /* .cmn-btn:hover{
+  background: #2f5d46;
+} */
+
 
 .leaf-image{
   max-width: 30%;
