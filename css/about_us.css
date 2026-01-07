@@ -1,6 +1,6 @@
 /* banner-sec-starts */
 .banner-sec {
-    background: url(../images/About-us-Banner-Image.png);
+    background: url(../images/about-us-page-images/About-us-Banner-Image.png);
     background-repeat: no-repeat;
     height: 345px;
     background-position: center;
@@ -55,7 +55,7 @@
     left: 100px;
     width: 568px;
     height: 261px;
-    background: url(../images/about-bg-img.svg);
+    background: url(../images/about-us-page-images/about-bg-img.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
