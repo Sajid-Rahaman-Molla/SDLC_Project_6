@@ -1,4 +1,8 @@
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 /* banner-sec-starts */
 .banner-sec {
     background: url(../images/About-us-Banner-Image.png);
@@ -28,6 +32,7 @@
   font-size: 20px;
   font-weight: 300;
   line-height: 1.6;
+  width: 75%;
 }
 
 /* banner-sec-ends */
@@ -59,6 +64,7 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   list-style: none;
+  padding: 0;
   
 }
 
@@ -66,12 +72,15 @@
   padding: 8px 16px;
   border-radius: 5px;
   border: 1px solid #ddd;
-  margin: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
   font-size: 16px;
   cursor: pointer;
   background: #E8E8E8;
-  transition: all 0.3s ease;
+  transition: all 0.8s ease;
 }
+
+
 
 .blog-filter li:hover {
   background: #cfcfcf;
