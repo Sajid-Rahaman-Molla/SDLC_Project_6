@@ -397,16 +397,15 @@ form input::placeholder{
 .btn-submit {
   padding: 12px 25px;
   border: none;
-  background-color: var(--dark-color);
-  color: var(--bg-light-color);
-  border-radius: 10px;
+   border-radius: 10px;
   cursor: pointer;
 }
- /* .cmn-btn:hover{
+ .cmn-btn:hover{
   background: #2f5d46;
-} */
-
-
+} 
+.btn-clear:hover{
+  background:#e69696 ;
+}
 .leaf-image{
   max-width: 30%;
   position: absolute;
