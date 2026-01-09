@@ -930,6 +930,8 @@ p,
     cursor: pointer;
     margin-left: auto;
     overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 .subscribe-btn::after {
