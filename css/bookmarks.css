@@ -1,6 +1,6 @@
 /* banner-sec-starts */
 .banner-sec {
-  background: url(../images/About-us-Banner-Image.png);
+  background: url(../images/about-us-page-images/About-us-Banner-Image.png);
   background-repeat: no-repeat;
   height: 345px;
   background-position: center;
@@ -116,21 +116,21 @@
 }
 
 .card-image {
+  overflow: hidden;
   width: 50%;
   position: relative;
   padding-right: 20px;
 }
 
-
-.card-content {
-  width: 50%;
-}
-.card-img-div{
+.card-img-div {
   overflow: hidden;
   border-radius: 15px;
 }
-.card-img-div img{
+.card-img-div img {
   display: block;
+}
+.card-content {
+  width: 50%;
 }
 
 .content {
@@ -225,6 +225,9 @@
 
 .cmn-card:hover .learn-more i {
   transform: rotate(-30deg);
+}
+.cmn-card:hover .learn-more {
+  color: var(--primary-color);
 }
 
 .wellness-right-part {
