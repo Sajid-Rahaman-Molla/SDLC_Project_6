@@ -28,11 +28,12 @@
 
 .banner-child p {
   margin: auto;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 300;
+  color: var(--text-primary-color);
+  /* color: #fff; */
+  /* font-size: 20px; */
+  /* font-weight: 300; */
   line-height: 1.6;
-  width: 75%;
+  width: 70%;
 }
 
 /* banner-sec-ends */
