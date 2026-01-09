@@ -111,7 +111,8 @@
                                 and clarity."</p>
                             <div class="profile">
                                 <div class="profile-img">
-                                    <img src="./images/about-us-page-images/our-story-profile-img.png" alt="profile-img">
+                                    <img src="./images/about-us-page-images/our-story-profile-img.png"
+                                        alt="profile-img">
                                 </div>
                                 <div class="profile-perent">
                                     <h3 class="heading-4">dr.ananda</h3>
@@ -195,24 +196,29 @@
                         <!-- Quick search -->
                         <div class="first-row">
                             <a href="#" class="quick-search">
-                                <img src="./images/about-us-page-images/Nutrition-iconSvg.co.svg" alt="icon"> nutrition and diet
+                                <img src="./images/about-us-page-images/Nutrition-iconSvg.co.svg" alt="icon"> nutrition
+                                and diet
                             </a>
                             <a href="#" class="quick-search">
-                                <img src="./images/about-us-page-images/Home-Gym-Equipment-iconSvg.co.svg" alt="icon"> fitness and exercise
+                                <img src="./images/about-us-page-images/Home-Gym-Equipment-iconSvg.co.svg" alt="icon">
+                                fitness and exercise
                             </a>
                             <a href="#" class="quick-search">
-                                <img src="./images/about-us-page-images/Health-Care-Worker-iconSvg.co.svg" alt="icon"> mental health
+                                <img src="./images/about-us-page-images/Health-Care-Worker-iconSvg.co.svg" alt="icon">
+                                mental health
                             </a>
 
                             <a href="#" class="quick-search">
                                 <img src="./images/about-us-page-images/Sleep-iconSvg.co.svg" alt="icon"> sleep health
                             </a>
                             <a href="#" class="quick-search">
-                                <img src="./images/about-us-page-images/Alternative-Therapies-iconSvg.co.svg" alt="icon"> alternative
+                                <img src="./images/about-us-page-images/Alternative-Therapies-iconSvg.co.svg"
+                                    alt="icon"> alternative
                                 therapies
                             </a>
                             <a href="#" class="quick-search">
-                                <img src="./images/about-us-page-images/Preventive-Care-iconSvg.co.svg" alt="icon"> preventive care
+                                <img src="./images/about-us-page-images/Preventive-Care-iconSvg.co.svg" alt="icon">
+                                preventive care
                             </a>
                         </div>
                     </div>
@@ -393,83 +399,83 @@
 
 
     <!-- community sec js -->
-  <script>
-  const section = document.querySelector(".community-sec");
-  const counters = document.querySelectorAll(".count");
-  let started = false;
+    <script>
+        const section = document.querySelector(".community-sec");
+        const counters = document.querySelectorAll(".count");
+        let started = false;
 
-  const observer = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting && !started) {
-      started = true;
-      setTimeout(startCounters, 800);
-    }
-  });
+        const observer = new IntersectionObserver(entries => {
+            if (entries[0].isIntersecting && !started) {
+                started = true;
+                setTimeout(startCounters, 800);
+            }
+        });
 
-  observer.observe(section);
+        observer.observe(section);
 
-  function startCounters() {
-    counters.forEach(counter => {
-      const target = Number(counter.dataset.target);
+        function startCounters() {
+            counters.forEach(counter => {
+                const target = Number(counter.dataset.target);
 
-      if (target === 2000) {
-        counter2000(counter);
-      } else {
-        counterSmall(counter, target);
-      }
-    });
-  }
+                if (target === 2000) {
+                    counter2000(counter);
+                } else {
+                    counterSmall(counter, target);
+                }
+            });
+        }
 
-  /* ---------- 30 / 25 ---------- */
-  function counterSmall(el, target) {
-    let value = 0;
+        /* ---------- 30 / 25 ---------- */
+        function counterSmall(el, target) {
+            let value = 0;
 
-    function step() {
-      animate(el, value);
-      if (value === target) return;
+            function step() {
+                animate(el, value);
+                if (value === target) return;
 
-      value++;
-      setTimeout(step, 130);
-    }
+                value++;
+                setTimeout(step, 130);
+            }
 
-    step();
-  }
+            step();
+        }
 
-  /* ---------- 2000 ---------- */
-  function counter2000(el) {
-    let value = 0;
+        /* ---------- 2000 ---------- */
+        function counter2000(el) {
+            let value = 0;
 
-    function step() {
-      // phase 1: 0 → 1000
-      if (value < 1000) {
-        animate(el, value);
-        value += 20;
-      }
-      // phase 2: 1.1k → 2.0k
-      else if (value < 2000) {
-        value += 100;
-        animate(el, (value / 1000).toFixed(1) + "k");
-      }
-      // end
-      else {
-        animate(el, "2k");
-        return;
-      }
+            function step() {
+                // phase 1: 0 → 1000
+                if (value < 1000) {
+                    animate(el, value);
+                    value += 20;
+                }
+                // phase 2: 1.1k → 2.0k
+                else if (value < 2000) {
+                    value += 100;
+                    animate(el, (value / 1000).toFixed(1) + "k");
+                }
+                // end
+                else {
+                    animate(el, "2k");
+                    return;
+                }
 
-      setTimeout(step, 70);
-    }
+                setTimeout(step, 70);
+            }
 
-    step();
-  }
+            step();
+        }
 
-  /* ---------- animation helper ---------- */
-  function animate(el, val) {
-    el.classList.add("animate");
-    setTimeout(() => {
-      el.textContent = val;
-      el.classList.remove("animate");
-    }, 120);
-  }
-</script>
+        /* ---------- animation helper ---------- */
+        function animate(el, val) {
+            el.classList.add("animate");
+            setTimeout(() => {
+                el.textContent = val;
+                el.classList.remove("animate");
+            }, 120);
+        }
+    </script>
 
 
 </body>
