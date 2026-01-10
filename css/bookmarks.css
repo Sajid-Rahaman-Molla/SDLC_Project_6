@@ -63,6 +63,8 @@
 .wellness-left-part input[type="checkbox"] {
   margin-right: 8px;
   accent-color: var(--dark-color);
+  height: 16px;
+  width: 16px;
 }
 
 .btn-apply {
@@ -80,6 +82,7 @@
 .wellness-right-part {
   width: 80%;
   padding-left: 25px;
+  padding-right: 25px;
 }
 
 .wellness-cards {
@@ -137,7 +140,12 @@
 }
 
 .content {
+  display: flex;
+  align-items: center;
   padding-top: 5px;
+}
+.content span{
+  display: block;
 }
 
 .tag {
