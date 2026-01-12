@@ -145,7 +145,9 @@
   padding-top: 5px;
 }
 .content span{
-  display: block;
+  /* display: block; */
+  display: flex;
+  align-items: center;
 }
 
 .tag {
