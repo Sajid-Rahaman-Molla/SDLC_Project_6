@@ -1,11 +1,4 @@
-/* html,
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-} */
+
 /* banner-sec-starts */
 .banner-sec {
   background: url(../images/bookmark-page-image/bookmar-banner-image.jpg);
@@ -268,7 +261,6 @@ body {
   }
   .wellness-right-part {
     width: 75%;
-    height: auto;
   }
   .card-content h3 {
     font-size: 18px;
@@ -321,3 +313,5 @@ body {
     object-fit: cover;
   }
 }
+/* small screen */
+/* 350 */
