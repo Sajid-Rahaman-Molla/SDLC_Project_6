@@ -1,4 +1,3 @@
-
 /* banner-sec-starts */
 .banner-sec {
   background: url(../images/bookmark-page-image/bookmar-banner-image.jpg);
@@ -22,6 +21,9 @@
 
 /* banner-sec-ends */
 /* bookmarks-sec-starts */
+.filter-toggle {
+  display: none;
+}
 .wellness-section {
   background-color: var(--text-primary-color);
 }
@@ -51,6 +53,9 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
 }
 
+/* .wellness-left-part h2 {
+  margin-top: 0;
+} */
 .wellness-left-part h4 {
   margin-bottom: 15px;
 }
@@ -85,6 +90,7 @@
   padding-left: 25px;
   padding-right: 25px;
 }
+
 .wellness-right-part {
   overflow-y: auto;
   height: 800px;
@@ -93,6 +99,7 @@
 .wellness-right-part::-webkit-scrollbar {
   display: none;
 }
+
 .wellness-cards {
   display: flex;
   flex-wrap: wrap;
@@ -112,6 +119,7 @@
 .cmn-card:hover .card-image img {
   transform: scale(1.1);
 }
+
 .card-img::after {
   content: "";
   position: absolute;
@@ -140,9 +148,11 @@
   overflow: hidden;
   border-radius: 15px;
 }
+
 .card-img-div img {
   display: block;
 }
+
 .card-content {
   width: 50%;
 }
@@ -150,6 +160,7 @@
 .content {
   padding-top: 5px;
 }
+
 .content span {
   display: block;
 }
@@ -245,72 +256,305 @@
 .cmn-card:hover .learn-more i {
   transform: rotate(-30deg);
 }
+
 .cmn-card:hover .learn-more {
   color: var(--primary-color);
+}
+
+.filter-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 9998;
+  display: none;
+}
+
+.filter-overlay.active {
+  display: block;
+}
+.filter-close {
+  display: none;
 }
 
 /* bookmarks-sec-end */
 
 /* media queries */
 @media screen and (max-width: 1399px) {
-  .main-wellness {
-    max-width: 1150px;
+  header,
+  footer {
+    display: none;
   }
+}
+@media screen and (max-width: 1199px) {
+  .banner-sec {
+    height: 600px;
+    padding: 20px;
+  }
+
+  .banner-child h1 {
+    font-size: 52px;
+  }
+
+  .banner-child p {
+    width: 60%;
+    font-size: 14px;
+  }
+  .wellness-title {
+    font-size: 40px;
+  }
+}
+
+/* .main-wellness {
+    max-width: 1100px;
+  }
+
   .wellness-left-part {
     width: 25%;
   }
+
   .wellness-right-part {
     width: 75%;
   }
+
   .card-content h3 {
     font-size: 18px;
   }
 }
+
 @media screen and (max-width: 1199px) {
   .wellness-left-part {
     width: 30%;
   }
+
   .wellness-right-part {
     width: 70%;
-     padding-left: 15px;
-    padding-right: 15px; 
+    padding-left: 15px;
+    padding-right: 15px;
   }
-   .card-image {
+
+  .card-image {
     width: 45%;
   }
+
   .card-content {
     width: 55%;
-  } 
+  }
+
   .carc-content p {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
+
 @media screen and (max-width: 991px) {
   .main-wellness {
     flex-direction: column;
   }
+
   .wellness-left-part,
   .wellness-right-part {
     width: 100%;
   }
+
   .wellness-left-part {
     margin-bottom: 30px;
   }
+
   .wellness-cards {
     flex-direction: column;
   }
+
   .card-image,
   .card-content {
     width: 100%;
   }
+
   .card-image {
     padding-right: 0;
     margin-bottom: 15px;
   }
+
   .card-img-div img {
     width: 100%;
     height: 220px;
     object-fit: cover;
+  }
+
+} */
+@media screen and (max-width: 991px) {
+  .banner-sec {
+    height: 660px;
+    padding: 20px;
+  }
+
+  .banner-child h1 {
+    font-size: 42px;
+  }
+
+  .banner-child p {
+    width: 100%;
+    font-size: 14px;
+  }
+.tag{
+  display: none;
+}
+.bookmark{
+  display: none;
+}
+  .filter-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: var(--dark-color);
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  .filter-close {
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
+  }
+  .wellness-left-part {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    z-index: 9999;
+    padding: 20px;
+    overflow-y: auto;
+    transition: 0.4s ease;
+    box-shadow: 4px 0 25px rgba(0, 0, 0, 0.25);
+  }
+  .wellness-left-part.active {
+    left: 0;
+  }
+
+  .filter-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 26px;
+    cursor: pointer;
+  }
+  .wellness-title {
+    font-size: 30px;
+  }
+
+  .wellness-right-part {
+    width: 100%;
+  }
+  .wellness-cards {
+    display: flex;
+    padding: 12px;
+  }
+
+  .card-image {
+    width: 38%;
+    padding-right: 12px;
+  }
+
+  .card-content {
+    width: 62%;
+  }
+
+  .card-img-div img {
+    height: 120px;
+    object-fit: cover;
+  }
+
+  .card-content h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .card-content p {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .content {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .banner-sec {
+    height: 660px;
+    padding: 20px;
+  }
+
+  .banner-child h1 {
+    font-size: 28px;
+  }
+
+  .banner-child p {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .banner-sec {
+    height: 600px;
+    padding: 20px;
+  }
+
+  .banner-child h1 {
+    font-size: 20px;
+  }
+
+  .banner-child p {
+    width: 100%;
+    font-size: 10px;
+  }
+
+  .card-image {
+    width: 35%;
+  }
+
+  .card-content {
+    width: 65%;
+  }
+
+  .card-img-div img {
+    height: 95px;
+  }
+
+  .learn-more {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .banner-sec {
+    height: 600px;
+    padding: 20px;
+  }
+
+  .banner-child h1 {
+    font-size: 18px;
+  }
+
+  .banner-child p {
+    width: 100%;
+    font-size: 10px;
+  }
+
+  .card-content h3 {
+    font-size: 14px;
+  }
+
+  .card-content p {
+    font-size: 12px;
   }
 }
 /* small screen */

@@ -17,7 +17,7 @@
 </head>
 
 <body>
-   <!-- header-sec-starts -->
+    <!-- header-sec-starts -->
     <header class="header">
         <div class="container">
             <nav class="nav-bar">
@@ -51,8 +51,7 @@
             <div class="container">
                 <div class="banner-child">
                     <h1>Bookmarks</h1>
-                    <p>A simple space to save and revisit articles that matter to you. Keep your favorite reads
-                        organized and return to them anytime, without distractions.</p>
+                    <p>Our FAQs provide science-backed tips on everything from better sleep to balanced eating, helping you make informed decisions about your well-being.</p>
                 </div>
             </div>
         </section>
@@ -61,10 +60,14 @@
         <section class="wellness-section cmn-gap">
             <div class="container">
                 <div class="wellnes-section-upper">
+                    <button class="filter-toggle">
+                        <i class="fa-solid fa-sliders"></i> Choose Category
+                    </button>
                     <h2 class="wellness-title">Wellness Picks</h2>
                 </div>
                 <div class="main-wellness">
                     <div class="wellness-left-part">
+                        <span class="filter-close">&times;</span>
                         <h4>Choose Category</h4>
                         <label><input type="checkbox" checked>All</label>
                         <label><input type="checkbox"> Nutrition</label>
@@ -75,7 +78,7 @@
                         <label><input type="checkbox"> Sleep Health</label>
                         <label><input type="checkbox"> Personal Wellness</label>
                         <label><input type="checkbox"> Extended Care</label>
-                         <button type="submit" class="btn-apply cmn-btn">apply now</button>
+                        <button type="submit" class="btn-apply cmn-btn">apply now</button>
                         <!-- <input type="submit" value="Apply Now" class="cmn-btn btn-apply"> -->
                     </div>
                     <div class="wellness-right-part">
@@ -91,7 +94,8 @@
 
                             <div class="card-content">
                                 <div class="content">
-                                    <span class="calendar"><img src="./images/bookmark-page-image/calendar.png" alt="calender">Dec
+                                    <span class="calendar"><img src="./images/bookmark-page-image/calendar.png"
+                                            alt="calender">Dec
                                         12,
                                         2025</span>
                                     <span>
@@ -122,7 +126,8 @@
 
                             <div class="card-content">
                                 <div class="content">
-                                    <span class="calendar"><img src="./images/bookmark-page-image/calendar.png" alt="calender">Dec
+                                    <span class="calendar"><img src="./images/bookmark-page-image/calendar.png"
+                                            alt="calender">Dec
                                         12,
                                         2025</span>
                                     <span>
@@ -152,7 +157,8 @@
 
                             <div class="card-content">
                                 <div class="content">
-                                    <span class="calendar"><img src="./images/bookmark-page-image/calendar.png" alt="calender">Dec
+                                    <span class="calendar"><img src="./images/bookmark-page-image/calendar.png"
+                                            alt="calender">Dec
                                         12,
                                         2025</span>
                                     <span>
@@ -182,7 +188,8 @@
 
                             <div class="card-content">
                                 <div class="content">
-                                    <span class="calendar"><img src="./images/bookmark-page-image/calendar.png" alt="calender">Dec
+                                    <span class="calendar"><img src="./images/bookmark-page-image/calendar.png"
+                                            alt="calender">Dec
                                         12,
                                         2025</span>
                                     <span>
@@ -212,7 +219,8 @@
 
                             <div class="card-content">
                                 <div class="content">
-                                    <span class="calendar"><img src="./images/bookmark-page-image/calendar.png" alt="calender">Dec
+                                    <span class="calendar"><img src="./images/bookmark-page-image/calendar.png"
+                                            alt="calender">Dec
                                         12,
                                         2025</span>
                                     <span>
@@ -308,6 +316,24 @@
         </div>
     </footer>
     <!-- ---- footer-sec-ends ---- -->
-</body>
+     <script>
+  const filterBtn = document.querySelector(".filter-toggle");
+  const filterPanel = document.querySelector(".wellness-left-part");
+  const closeBtn = document.querySelector(".filter-close");
+  const overlay = document.querySelector(".filter-overlay");
 
+  filterBtn.addEventListener("click", () => {
+    filterPanel.classList.add("active");
+    overlay.classList.add("active");
+  });
+
+  function closeFilter() {
+    filterPanel.classList.remove("active");
+    overlay.classList.remove("active");
+  }
+
+  closeBtn.addEventListener("click", closeFilter);
+  overlay.addEventListener("click", closeFilter);
+</script>
+</body>
 </html>
