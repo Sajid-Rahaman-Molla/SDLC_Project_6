@@ -24,6 +24,10 @@
 
     <!-- manual css link style.css -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- aos animation -->
+   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -59,8 +63,8 @@
         <section class="banner-section">
             <div class="container">
                 <div class="banner-content">
-                    <h1>Held By Nature, Guided By Calm</h1>
-                    <p class="sub-title heading-3">A Gentle Space To Heal And Grow</p>
+                    <h1 class="title-animate">Held By Nature, Guided By Calm</h1>
+                    <p class="sub-title heading-3" data-aos="fade-up"  data-aos-anchor-placement="top-center">A Gentle Space To Heal And Grow</p>
 
                     <a href="#" class="cmn-btn banner-btn">Explore Now</a>
                     <div class="quote-wrapper">
@@ -636,6 +640,11 @@
     <!-- j-query cdn -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
+    <!-- GSAP cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper('.swiper', {
@@ -825,6 +834,30 @@
             }, 120);
         }
     </script>
+    <!-- gsap js -->
+    <script>
+        const title = document.querySelector(".title-animate");
+        const text = title.innerText;
+
+        title.innerHTML = text
+            .split("")
+            .map(char => `<span class="char">${char === " " ? "&nbsp;" : char}</span>`)
+            .join("");
+
+        gsap.from(".char", {
+            x: 150,
+            opacity: 0,
+            duration: 0.7,
+            ease: "power4.out",
+            stagger: 0.04
+        });
+    </script>
+    <!-- aos animation -->
+   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+
 
 
 
