@@ -351,9 +351,52 @@ p,
 }
 
 .right-column {
-  width: 60%;
-  padding: 40px;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
 }
+.right-column-sub{
+  width: 100%;
+    position: relative;
+}
+.input-box-contact-us{
+position: relative;
+    margin-bottom: 15px;
+}
+
+.input-box-contact-us input,textarea {
+    width: 100%;
+    padding: 14px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-box-contact-us label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #999;
+    pointer-events: none;
+    transition: 0.3s ease;
+    background: #fff;
+    padding: 0 5px;
+}
+
+/* MAGIC */
+.input-box-contact-us input:focus+label,textarea
+.input-box-contact-us input:not(:placeholder-shown)+label {
+    top: -1px;
+    font-size: 13px;
+    color: #0c2a1f;
+}
+
+
+
 
 .form-group {
   margin-bottom: 15px;
@@ -812,8 +855,8 @@ form input::placeholder {
     margin-bottom: 24px;
   }
 
-  .form-group input,
-  .form-group textarea {
+  .input-box-contact-us input,
+  .input-box-contact-us textarea {
     padding: 14px 16px;
   }
 
