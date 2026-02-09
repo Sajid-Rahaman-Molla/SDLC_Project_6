@@ -51,7 +51,9 @@
             <div class="container">
                 <div class="banner-child">
                     <h1>Bookmarks</h1>
-                    <p>Bookmarks lets you save and revisit your favourite health and wellness articles in one place. Discover trusted content on nutrition, fitness, mental health, and self-care to support your everyday well-being.</p>
+                    <p>Bookmarks lets you save and revisit your favourite health and wellness articles in one place.
+                        Discover trusted content on nutrition, fitness, mental health, and self-care to support your
+                        everyday well-being.</p>
                 </div>
             </div>
         </section>
@@ -158,8 +160,8 @@
                             <div class="card-content">
                                 <div class="content">
                                     <span class="calendar"><img src="./images/bookmark-page-image/calendar.png"
-                                            alt="calender">Dec
-                                        12,
+                                            alt="calender">May
+                                        14,
                                         2025</span>
                                     <span>
                                         <img src="./images/bookmark-page-image/chat.png" alt="comment">0
@@ -180,9 +182,9 @@
                         <div class="wellness-cards cmn-card">
                             <div class="card-image">
                                 <div class="card-img-div">
-                                    <img src="./images/bookmark-page-image/wellness-card-4.png" alt="card-4-image">
+                                    <img src="./images/bookmark-page-image/wellness-card-4.jpg" alt="card-4-image">
                                 </div>
-                                <span class="tag">Fitnes</span>
+                                <span class="tag">Preventive Care</span>
                                 <span class="bookmark"> <i class="fa-regular fa-bookmark bookmark"></i></span>
                             </div>
 
@@ -243,6 +245,7 @@
         <!-- bookmarks-sec-end -->
     </main>
     <!-- main-end -->
+
     <!------ footer-sec-starts ------>
     <footer class="footer-sec">
         <div class="container">
@@ -316,24 +319,26 @@
         </div>
     </footer>
     <!-- ---- footer-sec-ends ---- -->
-     <script>
-  const filterBtn = document.querySelector(".filter-toggle");
-  const filterPanel = document.querySelector(".wellness-left-part");
-  const closeBtn = document.querySelector(".filter-close");
-  const overlay = document.querySelector(".filter-overlay");
 
-  filterBtn.addEventListener("click", () => {
-    filterPanel.classList.add("active");
-    overlay.classList.add("active");
-  });
+    <script>
+        const filterBtn = document.querySelector(".filter-toggle");
+        const filterPanel = document.querySelector(".wellness-left-part");
+        const closeBtn = document.querySelector(".filter-close");
+        const overlay = document.querySelector(".filter-overlay");
 
-  function closeFilter() {
-    filterPanel.classList.remove("active");
-    overlay.classList.remove("active");
-  }
+        filterBtn.addEventListener("click", () => {
+            filterPanel.classList.add("active");
+            overlay.classList.add("active");
+        });
 
-  closeBtn.addEventListener("click", closeFilter);
-  overlay.addEventListener("click", closeFilter);
-</script>
+        function closeFilter() {
+            filterPanel.classList.remove("active");
+            overlay.classList.remove("active");
+        }
+
+        closeBtn.addEventListener("click", closeFilter);
+        overlay.addEventListener("click", closeFilter);
+    </script>
 </body>
+
 </html>
