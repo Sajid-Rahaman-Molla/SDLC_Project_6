@@ -21,11 +21,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- swiper cdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
 
     <!-- manual css link style.css -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- aos animation -->
-   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"> -->
 
 
 </head>
@@ -52,7 +55,7 @@
                                 alt="signup"></a>
                         <a href="./signup.html" class="cmn-btn">sign up</a>
                     </div>
-                    <!-- <a class="menu-bar" id="menu-bar"><i class="fa-solid fa-bars"></i></a> -->
+                    <a class="menu-bar" id="menu-bar"><i class="fa-solid fa-bars"></i></a>
                 </div>
             </nav>
         </div>
@@ -60,21 +63,99 @@
     <!-- header-sec-ends -->
     <main>
         <!-- banner-sec-starts -->
-        <section class="banner-section">
+        <!-- <section class="banner-section">
             <div class="container">
                 <div class="banner-content">
-                    <h1 class="title-animate">Held By Nature, Guided By Calm</h1>
-                    <p class="sub-title heading-3" data-aos="fade-up"  data-aos-anchor-placement="top-center">A Gentle Space To Heal And Grow</p>
+                    <h1 class="title-animate">Health & Wellness Tips for a Balanced and Healthy Life</h1>
+                    <p class="sub-title heading-3" data-aos="fade-up" data-aos-anchor-placement="top-center">A Gentle
+                        Space to Heal and Grow</p>
 
                     <a href="#" class="cmn-btn banner-btn">Explore Now</a>
                     <div class="quote-wrapper">
-                        <p id="quote-text"></p>
-                        <span id="quote-author"></span>
+                        <p id="quote-text">"Meditation is the delicate art of doing nothing."</p>
+                        <span id="quote-author">— Sri Sri Ravi Shankar</span>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- banner-sec-starts -->
+        <section class="banner-section">
+            <div class="swiper bannerSwiper">
+                <div class="swiper-wrapper">
+
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide banner-slide"
+                        style="background-image:url('/images/home-page-images/Hero.png')">
+                        <div class="container">
+                            <div class="banner-content">
+                                <h1 class="title-animate">
+                                    Health & Wellness Tips for a Balanced and Healthy Life
+                                </h1>
+                                <p class="sub-title heading-3">
+                                    A Gentle Space to Heal and Grow
+                                </p>
+
+                                <a href="#" class="cmn-btn banner-btn">Explore Now</a>
+
+                                <div class="quote-wrapper">
+                                    <p>"Meditation is the delicate art of doing nothing."</p>
+                                    <span>— Sri Sri Ravi Shankar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide banner-slide"
+                        style="background-image:url('/images/home-page-images/Home\ Hero\ Banner\ Animation\ 2.png')">
+                        <div class="container">
+                            <div class="banner-content">
+                                <h1 class="title-animate">
+                                    Mindfulness for Inner Peace
+                                </h1>
+                                <p class="sub-title heading-3">
+                                    Slow Down, Breathe & Reconnect
+                                </p>
+
+                                <a href="#" class="cmn-btn banner-btn">Start Journey</a>
+
+                                <div class="quote-wrapper">
+                                    <p>"Peace comes from within. Do not seek it without."</p>
+                                    <span>— Buddha</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide banner-slide"
+                        style="background-image:url('/images/home-page-images/Home\ Hero\ Banner\ Animation\ 3.png')">
+                        <div class="container">
+                            <div class="banner-content">
+                                <h1 class="title-animate">
+                                    Healthy Body, Calm Mind
+                                </h1>
+                                <p class="sub-title heading-3">
+                                    Balance Your Life Naturally
+                                </p>
+
+                                <a href="#" class="cmn-btn banner-btn">Learn More</a>
+
+                                <div class="quote-wrapper">
+                                    <p>"Health is a state of body. Wellness is a state of being."</p>
+                                    <span>— J. Stanford</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
             </div>
         </section>
+        <!-- banner-sec-ends -->
+
+
+
         <!-- banner-sec-ends -->
 
         <!-- featured-blogs-sec-starts -->
@@ -650,38 +731,51 @@
         var swiper = new Swiper('.swiper', {
             slidesPerView: 3,
             direction: getDirection(),
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1
+                },
+                761: {
+                    slidesPerView: 2
+                },
+                993: {
+                    slidesPerView: 3
+                }
+            },
+
             navigation: {
                 nextEl: ".custom-next",
                 prevEl: ".custom-prev",
             },
+
             on: {
                 init: function () {
                     toggleButtons(this);
                 },
                 slideChange: function () {
                     toggleButtons(this);
+                },
+                resize: function () {
+                    this.changeDirection(getDirection());
                 }
             }
         });
 
-        function getDirection() {
-            var windowWidth = window.innerWidth;
-            var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+        // function getDirection() {
+            // return window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+        // }
 
-            return direction;
-        }
         function toggleButtons(swiper) {
             const prevBtn = document.querySelector(".custom-prev");
             const nextBtn = document.querySelector(".custom-next");
 
-            // First slide
             if (swiper.isBeginning) {
                 prevBtn.classList.add("disabled");
             } else {
                 prevBtn.classList.remove("disabled");
             }
 
-            // Last slide
             if (swiper.isEnd) {
                 nextBtn.classList.add("disabled");
             } else {
@@ -690,8 +784,9 @@
         }
     </script>
 
+
     <!-- JS for quote animation -->
-    <script>
+    <!-- <script>
         const quotes = [
             {
                 text: "Meditation is the delicate art of doing nothing.",
@@ -754,7 +849,7 @@
 
         showQuote();
         setInterval(showQuote, 4000);
-    </script>
+    </script> -->
 
     <!-- community sec js -->
     <script>
@@ -834,32 +929,46 @@
             }, 120);
         }
     </script>
-    <!-- gsap js -->
+    <!-- aos animation -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-        const title = document.querySelector(".title-animate");
-        const text = title.innerText;
+        AOS.init();
+    </script>
 
-        title.innerHTML = text
-            .split("")
-            .map(char => `<span class="char">${char === " " ? "&nbsp;" : char}</span>`)
-            .join("");
+    <!-- <script>
+        var swiperOne = new Swiper(".swiperOne", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-one-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-one-next",
+                prevEl: ".swiper-one-prev",
+            },
+        });
 
-        gsap.from(".char", {
-            x: 150,
-            opacity: 0,
-            duration: 0.7,
-            ease: "power4.out",
-            stagger: 0.04
+    </script> -->
+    <script>
+        var bannerSwiper = new Swiper(".bannerSwiper", {
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true
+            },
+            speed: 1200,
+            loop: true,
+            autoplay: {
+                delay: 4500,
+                disableOnInteraction: false
+            }
         });
     </script>
-    <!-- aos animation -->
-   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-AOS.init();
-</script>
-
-
-
 
 </body>
+
 </html>

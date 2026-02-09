@@ -250,16 +250,6 @@ p,
 /* header-sec-ends */
 
 /* banner-sec-starts */
-.banner-section {
-    background: url(../images/home-page-images/banner-bg-vid.gif);
-    display: flex;
-    align-items: center;
-    min-height: calc(100vh - 100px);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
-}
-
 .banner-content {
     max-width: 90%;
     margin: 0 auto;
@@ -267,12 +257,13 @@ p,
 }
 
 .banner-content h1 {
-    color: var(--text-dark-color);
+    color: var(--text-primary-color);
 }
 
 .banner-content .sub-title {
     margin-bottom: 32px;
     opacity: 0.9;
+    color: var(--text-primary-color);
 }
 
 .banner-content .cmn-btn {
@@ -319,13 +310,50 @@ p,
     font-size: 24px;
     font-style: italic;
     margin-bottom: 12px;
-    color: var(--black-color);
+    color: var(--text-primary-color);
     font-family: 'Times New Roman', Times, serif;
 }
 
 #quote-author {
     font-size: 16px;
-    color: var(--black-color);
+    color: var(--text-primary-color);
+}
+
+.banner-section {
+    height: 100vh;
+    position: relative;
+}
+
+.bannerSwiper,
+.banner-slide {
+    height: 100%;
+}
+
+.banner-slide {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.banner-slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    /* max-width: 700px; */
+    padding: 120px 0;
+}
+
+.quote-wrapper {
+    margin-top: 30px;
+    font-style: italic;
+    opacity: 0.85;
 }
 
 /* banner-sec-ends */
@@ -1119,3 +1147,314 @@ p,
 
 
 /* media queries */
+@media (max-width: 1400px) {
+    .overlay-img {
+        right: 12px;
+        bottom: 67px;
+    }
+
+}
+
+
+@media (max-width: 1200px) {
+    .nav-links li {
+        margin-right: 20px;
+    }
+
+    .nav-logo {
+        width: 130px;
+    }
+
+    .user-signup img,
+    .search-icon img {
+        margin-right: 24px;
+    }
+
+    .cmn-btn {
+        padding: 10px 22px;
+    }
+
+    .swiper-slide {
+        padding: 10px;
+    }
+
+    .card-content h3 {
+        height: 80px;
+    }
+
+    .overlay-img {
+        right: 12px;
+        bottom: 221px;
+    }
+
+    .profile-img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .primary-color-text {
+        margin-bottom: 0px;
+    }
+
+    .community-img img {
+        height: 403px;
+        width: 432px;
+        position: absolute;
+        bottom: 4px;
+        left: 49px;
+    }
+
+    .reach-out-right span {
+        margin-bottom: 10px;
+    }
+
+    .text-paragraph-2 {
+        margin-bottom: 20px;
+    }
+
+    .social-icons li {
+        margin-bottom: 10px;
+    }
+
+    h2,
+    .heading-2 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-right-2 {
+        margin-right: 35px;
+    }
+
+    .menu-bar i {
+        font-size: 32px;
+    }
+
+    .banner-btn {
+        margin-bottom: 100px;
+    }
+
+    h1,
+    .heading-1 {
+        font-size: 60px;
+    }
+
+    .story-left,
+    .story-right {
+        width: 100%;
+
+    }
+
+    .story-left {
+        margin-bottom: 20px;
+    }
+
+    .overlay-img {
+        right: 12px;
+        bottom: -78px;
+    }
+
+    .latest-blog-sec .cmn-card {
+        width: calc(50% - 15px);
+        margin-bottom: 20px;
+    }
+
+    .community-img img {
+        height: 317px;
+        width: 341px;
+        position: absolute;
+        bottom: 114px;
+        left: 34px;
+    }
+
+    .community-inner-text {
+        padding: 26px 33px 24px 0;
+    }
+
+    .community-blogs-text {
+        margin-right: 50px;
+    }
+
+    .count,
+    .plus {
+        font-size: 35px;
+    }
+
+    .community-img img {
+        height: 317px;
+        width: 341px;
+        position: absolute;
+        bottom: 6px;
+        left: 34px;
+    }
+
+    .reach-out-left,
+    .reach-out-right {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .reach-out-left {
+        margin-bottom: 20px;
+    }
+
+    .footer-top {
+        max-width: 95%;
+    }
+
+    .footer-1 {
+        width: 55%;
+    }
+
+    .cmn-footer {
+        width: 45%;
+        padding: 0 20px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    h1,
+    .heading-1 {
+        font-size: 50px;
+    }
+
+    .swiper-slide {
+        width: 100%;
+    }
+
+    .community-left,
+    .community-right {
+        width: 100%;
+
+    }
+
+    .community-left {
+        order: 2;
+    }
+
+    .community-child {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #3B5638;
+        height: 665px;
+        border-radius: 20px;
+        margin: 0 -15px;
+        text-align: center;
+        /* justify-content: center; */
+        /* align-items: center; */
+    }
+
+    .community-inner-text {
+        padding: 50px 0;
+    }
+
+    .community-lower-sec {
+        justify-content: center;
+    }
+
+    .community-img img {
+        height: 317px;
+        width: 341px;
+        position: absolute;
+        bottom: 0px;
+        left: 117px;
+    }
+
+    .latest-blog-sec .cmn-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cmn-footer {
+        width: 100%;
+    }
+
+    .footer-child {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .footer-1 {
+        text-align: center;
+
+    }
+
+    .footer-logo,
+    .footer-text {
+        margin: 0 auto;
+    }
+
+    .footer-logo,
+    .footer-text {
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-end {
+        text-align: center;
+    }
+
+    .banner-btn {
+        margin-bottom: 70px;
+    }
+
+    .nav-right-2 {
+        margin-right: 26px;
+    }
+
+    .cmn-btn {
+        padding: 8px 16px;
+    }
+
+    .search-icon {
+        display: none;
+    }
+
+    .community-img img {
+        height: 298px;
+        width: 310px;
+        position: absolute;
+        bottom: 0px;
+        left: 44px;
+    }
+
+    .community-child {
+        height: 736px;
+    }
+
+    h1,
+    .heading-1 {
+        font-size: 40px;
+    }
+
+    h3,
+    .heading-3 {
+        font-size: 24px;
+    }
+
+
+
+
+
+
+
+
+}
+
+
+@media (max-width: 576px) {}
