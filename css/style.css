@@ -161,6 +161,7 @@ p,
 
 /* header-sec-starts */
 .header {
+    position: relative;
     background-color: var(--nav-bar-bg-color);
     padding: 14px 0;
 }
@@ -259,9 +260,11 @@ p,
 .banner-content h1 {
     color: var(--text-primary-color);
 }
-.menu-bar{
+
+.menu-bar {
     display: none;
 }
+
 .banner-content .sub-title {
     margin-bottom: 32px;
     opacity: 0.9;
@@ -1322,6 +1325,41 @@ p,
         width: 45%;
         padding: 0 20px;
     }
+
+    .menu-bar {
+        display: block;
+    }
+
+    .nav-links {
+        display: block;
+        position: absolute;
+        background-color: var(--nav-bar-bg-color);
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        text-align: center;
+        height: 100vh;
+    }
+
+    .nav-links li {
+        margin-bottom: 20px;
+
+    }
+
+    .nav-links.active {
+        width: 100%;
+    }
+
+
+
+
+
+
+
+
+
+
 
 }
 
