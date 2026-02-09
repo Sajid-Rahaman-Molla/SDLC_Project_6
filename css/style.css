@@ -161,14 +161,9 @@ p,
 
 /* header-sec-starts */
 .header {
-<<<<<<< HEAD
     position: relative;
     background-color: var(--nav-bar-bg-color);
     padding: 14px 0;
-=======
-  background-color: var(--nav-bar-bg-color);
-  padding: 14px 0;
->>>>>>> 39cf33eed841e09a9616e7d0b64c862fd5eaeaec
 }
 
 .nav-bar {
@@ -265,14 +260,9 @@ p,
 .banner-content h1 {
   color: var(--text-primary-color);
 }
-<<<<<<< HEAD
 
 .menu-bar {
     display: none;
-=======
-.menu-bar {
-  display: none;
->>>>>>> 39cf33eed841e09a9616e7d0b64c862fd5eaeaec
 }
 
 .banner-content .sub-title {
