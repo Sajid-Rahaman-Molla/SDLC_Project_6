@@ -259,7 +259,9 @@ p,
 .banner-content h1 {
     color: var(--text-primary-color);
 }
-
+.menu-bar{
+    display: none;
+}
 .banner-content .sub-title {
     margin-bottom: 32px;
     opacity: 0.9;
@@ -1446,13 +1448,6 @@ p,
     .heading-3 {
         font-size: 24px;
     }
-
-
-
-
-
-
-
 
 }
 
