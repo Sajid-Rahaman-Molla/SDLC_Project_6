@@ -1,9 +1,9 @@
 /* banner-sec-starts */
 .banner-sec {
-  background: url(../images/bookmark-page-image/bookmar-banner-image.jpg);
+  background: url(../images/bookmark-page-image/Bookmark-banner-image.png);
   background-repeat: no-repeat;
   height: 345px;
-  background-position: center;
+  background-position: cover;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -41,7 +41,7 @@
 .main-wellness {
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -279,12 +279,7 @@
 /* bookmarks-sec-end */
 
 /* media queries */
-@media screen and (max-width: 1399px) {
-  header,
-  footer {
-    display: none;
-  }
-}
+
 @media screen and (max-width: 1199px) {
   .banner-sec {
     height: 600px;
@@ -387,19 +382,19 @@
   }
 
   .banner-child h1 {
-    font-size: 42px;
+    font-size: 50px;
   }
 
   .banner-child p {
     width: 100%;
     font-size: 14px;
   }
-.tag{
-  display: none;
-}
-.bookmark{
-  display: none;
-}
+  .tag {
+    display: none;
+  }
+  .bookmark {
+    display: none;
+  }
   .filter-toggle {
     display: inline-flex;
     align-items: center;
@@ -495,7 +490,7 @@
   }
 
   .banner-child h1 {
-    font-size: 28px;
+    font-size: 40px;
   }
 
   .banner-child p {
@@ -510,7 +505,7 @@
   }
 
   .banner-child h1 {
-    font-size: 20px;
+    font-size: 40px;
   }
 
   .banner-child p {
@@ -541,7 +536,7 @@
   }
 
   .banner-child h1 {
-    font-size: 18px;
+    font-size: 40px;
   }
 
   .banner-child p {
@@ -550,12 +545,13 @@
   }
 
   .card-content h3 {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .card-content p {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
+
 /* small screen */
 /* 350 */

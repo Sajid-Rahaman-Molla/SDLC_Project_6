@@ -162,9 +162,9 @@ p,
 
 /* header-sec-starts */
 .header {
-    position: relative;
-    background-color: var(--nav-bar-bg-color);
-    padding: 14px 0;
+  position: relative;
+  background-color: var(--nav-bar-bg-color);
+  padding: 14px 0;
 }
 
 .nav-bar {
@@ -263,7 +263,7 @@ p,
 }
 
 .menu-bar {
-    display: none;
+  display: none;
 }
 
 .banner-content .sub-title {
@@ -271,12 +271,14 @@ p,
   opacity: 0.9;
   color: var(--text-primary-color);
 }
+
 .title-animation {
   font-size: 72px;
   font-weight: 600;
   line-height: 1.2;
   color: var(--text-primary-color);
 }
+
 .banner-content .cmn-btn {
   display: inline-block;
   padding: 14px 32px;
@@ -697,12 +699,10 @@ p,
   left: -120%;
   width: 60%;
   height: 100%;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.4) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 100%);
   transform: skewX(-40deg);
   transition: left 0.6s ease-in-out;
 }
@@ -998,8 +998,8 @@ p,
   transition: all 0.3s ease;
 }
 
-.subscribe-input:focus + .floating-label,
-.subscribe-input:not(:placeholder-shown) + .floating-label {
+.subscribe-input:focus+.floating-label,
+.subscribe-input:not(:placeholder-shown)+.floating-label {
   top: 4px;
   font-size: 12px;
   color: var(--secondary-color);
@@ -1307,32 +1307,38 @@ p,
     width: 55%;
   }
 
-    .menu-bar {
-        display: block;
-    }
+  .menu-bar {
+    display: block;
+  }
 
-    .nav-links {
-        display: block;
-        position: absolute;
-        background-color: var(--nav-bar-bg-color);
-        top: 100%;
-        left: 0;
-        z-index: 1000;
-        width: 100%;
-        text-align: center;
-        height: 100vh;
-    }
+  .nav-links {
+    display: inline-block;
+    position: fixed;
+    top: 87px;
+    background-color: var(--nav-bar-bg-color);
+    width: 60%;
+    text-align: center;
+    right: 0;
+    transform: translateX(100%);
+    padding-block: 15px;
+    height: calc(100vh - 87px);
+    transition: all .3s ease;
+    z-index: 1000;
+  }
 
-    .nav-links li {
-        margin-bottom: 20px;
+  .nav-links li {
+    margin-bottom: 20px;
 
-    }
+  }
 
-    .nav-links.active {
-        width: 100%;
-    }
+  .nav-links.active {
+    transform: translateX(0);
+  }
 
-
+.cmn-footer {
+  width: 50%;
+  margin-bottom: 20px;
+}
 
 
 
@@ -1345,6 +1351,7 @@ p,
 }
 
 @media (max-width: 768px) {
+
   h1,
   .heading-1 {
     font-size: 50px;
@@ -1466,5 +1473,4 @@ p,
   }
 }
 
-@media (max-width: 576px) {
-}
+@media (max-width: 576px) {}

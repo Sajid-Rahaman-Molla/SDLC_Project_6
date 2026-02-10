@@ -421,10 +421,7 @@
 
 /* media queries */
 @media screen and (max-width: 1400px) {
-    .header {
-        display: none;
-    }
-
+  
     .banner-child p {
         width: 65%;
     }

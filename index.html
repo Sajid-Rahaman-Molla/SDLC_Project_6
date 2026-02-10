@@ -39,7 +39,7 @@
         <div class="container">
             <nav class="nav-bar">
                 <a href="./index.html" class="nav-logo"><img src="./images/LOGO For Nav Bar.svg" alt="main-logo"></a>
-                <ul class="nav-links">
+                <ul class="nav-links" id="nav-links">
                     <li><a href="./index.html" class="active-page-select">home</a></li>
                     <li><a href="./about_us.html">about us</a></li>
                     <li><a href="./blog_list.html">blog list</a></li>
@@ -63,29 +63,13 @@
     <!-- header-sec-ends -->
     <main>
         <!-- banner-sec-starts -->
-        <!-- <section class="banner-section">
-            <div class="container">
-                <div class="banner-content">
-                    <h1 class="title-animate">Health & Wellness Tips for a Balanced and Healthy Life</h1>
-                    <p class="sub-title heading-3" data-aos="fade-up" data-aos-anchor-placement="top-center">A Gentle
-                        Space to Heal and Grow</p>
-
-                    <a href="#" class="cmn-btn banner-btn">Explore Now</a>
-                    <div class="quote-wrapper">
-                        <p id="quote-text">"Meditation is the delicate art of doing nothing."</p>
-                        <span id="quote-author">— Sri Sri Ravi Shankar</span>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- banner-sec-starts -->
         <section class="banner-section">
             <div class="swiper bannerSwiper">
                 <div class="swiper-wrapper">
 
                     <!-- Slide 1 -->
                     <div class="swiper-slide banner-slide"
-                        style="background-image:url('/images/home-page-images/Hero.png')">
+                        style="background-image:url('./images/home-page-images/Hero.png')">
                         <div class="container">
                             <div class="banner-content">
                                 <h1 class="title-animate">
@@ -107,11 +91,11 @@
 
                     <!-- Slide 2 -->
                     <div class="swiper-slide banner-slide"
-                        style="background-image:url('/images/home-page-images/Home\ Hero\ Banner\ Animation\ 2.png')">
+                        style="background-image:url('./images/home-page-images/Home\ Hero\ Banner\ Animation\ 2.png')">
                         <div class="container">
                             <div class="banner-content">
                                 <h2 class="title-animation">
-                                     Health & Wellness Tips for a Balanced and Healthy Life
+                                    Health & Wellness Tips for a Balanced and Healthy Life
                                 </h2>
                                 <p class="sub-title heading-3">
                                     A Gentle Space to Heal and Grow
@@ -129,14 +113,14 @@
 
                     <!-- Slide 3 -->
                     <div class="swiper-slide banner-slide"
-                        style="background-image:url('/images/home-page-images/Home\ Hero\ Banner\ Animation\ 3.png')">
+                        style="background-image:url('./images/home-page-images/Home\ Hero\ Banner\ Animation\ 3.png')">
                         <div class="container">
                             <div class="banner-content">
                                 <h2 class="title-animation">
-                                     Health & Wellness Tips for a Balanced and Healthy Life
+                                    Health & Wellness Tips for a Balanced and Healthy Life
                                 </h2>
                                 <p class="sub-title heading-3">
-                                   A Gentle Space to Heal and Grow
+                                    A Gentle Space to Heal and Grow
                                 </p>
 
                                 <a href="#" class="cmn-btn banner-btn">Explore Now</a>
@@ -763,7 +747,7 @@
         });
 
         // function getDirection() {
-            // return window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+        // return window.innerWidth <= 760 ? 'vertical' : 'horizontal';
         // }
 
         function toggleButtons(swiper) {
@@ -950,7 +934,7 @@
             navigation: {
                 nextEl: ".swiper-one-next",
                 prevEl: ".swiper-one-prev",
-            },
+            },~
         });
 
     </script> -->
@@ -965,6 +949,40 @@
             autoplay: {
                 delay: 4500,
                 disableOnInteraction: false
+            }
+        });
+    </script>
+
+    <!-- toggler-js -->
+    <script>
+        const toggleBtn = document.getElementById('menu-bar');
+        const navLinks = document.querySelector('.nav-links');
+        const icon = toggleBtn.querySelector('i');
+
+        toggleBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+
+            if (navLinks.classList.contains('active')) {
+                // Menu open
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Menu close
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Reset menu on window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 991.98) {
+                // Desktop view - reset everything
+                navLinks.classList.remove('active');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
             }
         });
     </script>

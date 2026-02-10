@@ -351,7 +351,7 @@
   }
 
   .banner-child h1 {
-    font-size: 42px;
+    /* font-size: 42px; */
   }
 
   .banner-child p {
@@ -365,13 +365,7 @@
     width: calc(50% - 20px);
   }
 
-  .blog-content h3{
-    font-size:18px;
-  }
-
-  .blog-content p{
-    font-size:14px;
-  }
+  
 
   .footer-top {
         max-width: 95%;
@@ -404,13 +398,11 @@
     padding: 20px;
   }
 
-  .banner-child h1 {
-    font-size: 28px;
-  }
+  
 
   .banner-child p {
     width: 100%;
-    font-size: 14px;
+
   }
 
   .blog-filter ul{
@@ -472,9 +464,9 @@
    background-image: url(../images/blog-list/responsive.png);
   }
 
-  .banner-child h1 {
+  /* .banner-child h1 {
     font-size: 20px;
-  }
+  } */
 
   .banner-child p {
     width: 100%;
