@@ -64,7 +64,7 @@
 .btn-group {
   display: flex;
   justify-content: center;
-  /* gap: 20px; */
+
 }
 
 .logout-btn {
@@ -88,10 +88,10 @@
   font-size: 16px;
 }
 
-.logout-btn:hover {
+/* .logout-btn:hover {
   background: #e59e9a;
 }
 
 .stay-btn:hover {
   background: #c5c5c5;
-}
+} */
