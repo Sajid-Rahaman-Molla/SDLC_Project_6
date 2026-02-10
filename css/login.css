@@ -63,6 +63,13 @@
   transform: translate(-50%, -50%);
 }
 
+.profile-edit {
+  position: absolute;
+  bottom: 13px;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+}
 
 /* buttons */
 .dashboard-buttons button {
@@ -84,6 +91,16 @@
 .btn-switch { background: #bfe8c4; }
 .btn-logout { background: #f5b6b6; }
 
+
+.stats-divider {
+  width: 95%;
+  height: 1px;
+  background: rgba(0,0,0,0.15);
+
+  margin: 18px 0 28px;
+}
+
+
 /* stats */
 
 
@@ -94,9 +111,10 @@
 }
 
 .quick-title {
-  width: 160px;
-  font-size: 20px;
+  width: 150px;
+  font-size: 22px;
   font-weight: 600;
+  margin-left: 22px;
 }
 
 /* right cards */
@@ -112,7 +130,7 @@
   padding: 15px;
   border-radius: 8px;
   text-align: center;
-  margin-right: 15px;
+  margin-right: 25px;
 }
 
 
