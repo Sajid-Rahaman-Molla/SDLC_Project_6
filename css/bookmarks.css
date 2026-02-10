@@ -279,12 +279,7 @@
 /* bookmarks-sec-end */
 
 /* media queries */
-@media screen and (max-width: 1399px) {
-  header,
-  footer {
-    display: none;
-  }
-}
+
 @media screen and (max-width: 1199px) {
   .banner-sec {
     height: 600px;

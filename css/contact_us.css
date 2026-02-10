@@ -346,59 +346,64 @@ p,
 .contact-info li:nth-child(3) {
   margin-bottom: 0;
 }
+
 .contact-info li a {
   color: var(--dark-color);
 }
 
 .right-column {
-    width: 60%;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-}
-.right-column-sub{
-  width: 100%;
-    position: relative;
-}
-.input-box-contact-us{
-position: relative;
-    margin-bottom: 15px;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
 }
 
-.input-box-contact-us input,textarea {
-    width: 100%;
-    padding: 14px 12px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    outline: none;
+.right-column-sub {
+  width: 100%;
+  position: relative;
+}
+
+.input-box-contact-us {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-box-contact-us input,
+textarea {
+  width: 100%;
+  padding: 14px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
 }
 
 .input-box-contact-us label {
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 14px;
-    color: #999;
-    pointer-events: none;
-    transition: 0.3s ease;
-    background: #fff;
-    padding: 0 5px;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #999;
+  pointer-events: none;
+  transition: 0.3s ease;
+  background: #fff;
+  padding: 0 5px;
 }
 
 /* MAGIC */
-.input-box-contact-us input:focus+label,textarea
-.input-box-contact-us input:not(:placeholder-shown)+label {
-    top: -1px;
-    font-size: 13px;
-    color: #0c2a1f;
+.input-box-contact-us input:focus+label,
+textarea .input-box-contact-us input:not(:placeholder-shown)+label {
+  top: -1px;
+  font-size: 13px;
+  color: #0c2a1f;
 }
-.input-box-contact-us textarea:focus+label,textarea
-.input-box-contact-us textarea:not(:placeholder-shown)+label {
-    top: -1px;
-    font-size: 13px;
-    color: #0c2a1f;
+
+.input-box-contact-us textarea:focus+label,
+textarea .input-box-contact-us textarea:not(:placeholder-shown)+label {
+  top: -1px;
+  font-size: 13px;
+  color: #0c2a1f;
 }
 
 
@@ -689,6 +694,7 @@ form input::placeholder {
   .child-contact {
     padding: 60px;
   }
+
   .contact-heading h2 {
     font-size: 42px;
   }
@@ -710,14 +716,16 @@ form input::placeholder {
   .contact-info li {
     margin-bottom: 40px;
   }
-   .head-para {
+
+  .head-para {
     width: 75%;
   }
 
 
 }
+
 @media screen and (max-width:991px) {
-   .child-contact {
+  .child-contact {
     padding: 40px;
     margin: 80px 0;
   }
@@ -753,6 +761,7 @@ form input::placeholder {
     max-width: 40%;
   }
 }
+
 @media screen and (max-width:767px) {
   .child-contact {
     padding: 30px 20px;
@@ -778,8 +787,9 @@ form input::placeholder {
     justify-content: space-between;
   }
 }
+
 @media screen and (max-width: 575px) {
-   .child-contact {
+  .child-contact {
     padding: 25px 15px;
     margin: 60px 0;
   }
@@ -830,8 +840,9 @@ form input::placeholder {
     max-width: 55%;
   }
 }
-  @media screen and (max-width: 320px) {
-    .child-contact {
+
+@media screen and (max-width: 320px) {
+  .child-contact {
     padding: 25px 15px;
     margin: 60px 0;
   }
@@ -881,4 +892,4 @@ form input::placeholder {
   .bottom-leaf-image {
     max-width: 55%;
   }
-  }
+}
