@@ -243,11 +243,11 @@ p,
 }
 
 .child-contact {
-  margin: 120px 0;
+  margin:60px 0;
   position: relative;
   border-radius: 16px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-  padding: 72px;
+  padding: 50px;
   overflow: hidden;
 }
 
@@ -565,8 +565,8 @@ form input::placeholder {
     margin: 60px 0;
   }
 
-  .contact-heading h2 {
-    font-size: 26px;
+  .heading-2 {
+    font-size: 32px;
   }
 
   .head-para {
@@ -617,8 +617,8 @@ form input::placeholder {
     margin: 60px 0;
   }
 
-  .contact-heading h2 {
-    font-size: 26px;
+  .heading-2 {
+    font-size: 32px;
   }
 
   .head-para {
