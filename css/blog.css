@@ -197,9 +197,7 @@
     max-width: 1200px;
   }
 
-  h1{font-size:60px;}
-  h2{font-size:42px;}
-  h3{font-size:28px;}
+
 
   .nav-links li{
     margin-right: 24px;
@@ -210,7 +208,7 @@
   }
 
   .banner-child h1{
-    font-size:42px;
+    
   }
 
   .banner-child p{
@@ -272,7 +270,7 @@
   }
 
   .banner-child h1 {
-    font-size: 52px;
+    
   }
 
   .banner-child p {

@@ -1,271 +1,396 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #ffffff;
 }
 
 .dashboard-sec {
-  height: 794px;
-  max-width: 967px;
-  margin: auto;
+    max-width: 967px;
+    margin: auto;
+    padding: 20px;
 }
 
-/* card */
+
 .child-dashboard {
-  margin: 120px 0;
-  padding: 20px;
-  border-radius: 40px;
-  background: linear-gradient(#e9f7ea, #cdeed1);
-  position: relative;
-  overflow: hidden;
+    margin: 40px 0;
+    padding: 30px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #ffffff 0%, #e9f7ea 50%, #cdeed1 100%);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-/* leaves */
-.leaf-image,
+/* Leaves */
+.leaf-image, .bottom-leaf-image {
+    width: 150px;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.6;
+}
+.leaf-image { 
+    top: 0;
+     left: 0;
+     }
+
 .bottom-leaf-image {
-  width: 180px;
-  position: absolute;
-  
+   bottom: 0;
+    right: 0;
+   }
+
+.dashboard-head, .quick-stats, .dashboard-bottom {
+    position: relative;
+    z-index: 1;
 }
 
-.leaf-image { top: 0; left: 0; }
-.bottom-leaf-image { bottom: 0; right: 0; }
-
-/* header */
-
-
-
+/* Header & Profile Section */
 .dashboard-head {
-  text-align: center;
-  margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .profile-img {
-  position: relative;
-  height: 150px;
-  margin: 0 auto 10px;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .profile-bg {
-  position: absolute;
-  opacity: 0.18;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    width: 200%; 
+    max-width: none;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.1; 
+    pointer-events: none;
 }
 
 .profile-main {
-  position: absolute;
-  border-radius: 50%;
-  object-fit: cover;
-  top: 62%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 2;
 }
 
 .profile-edit {
-  position: absolute;
-  bottom: 13px;
-  border-radius: 50%;
-  padding: 6px;
-  cursor: pointer;
+    position: absolute;
+    bottom: 22px; 
+    right: 22px;  
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 3;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* buttons */
+.user-name {
+    font-size: 24px;
+    color: #1a3a1a;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
 .dashboard-buttons button {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 18px;
-  border: none;
-  border-radius: 8px;
-  margin: 6px;
-  cursor: pointer;
-  font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: 500;
 }
 
-.dashboard-buttons img {
-  width: 16px;
-  margin-right: 8px;
-}
+.btn-switch { 
+  background: #d1f2d5;
+   color: #2d5a2d;
+   }
 
-.btn-switch { background: #bfe8c4; }
-.btn-logout { background: #f5b6b6; }
 
+.btn-logout {
+   background: #ffdada;
+    color: #a53d3d;
+   }
 
 .stats-divider {
-  width: 95%;
-  height: 1px;
-  background: rgba(0,0,0,0.15);
-
-  margin: 18px 0 28px;
+    width: 100%;
+    height: 1px;
+    background: rgba(0,0,0,0.1);
+    margin: 25px 0;
 }
 
-
-/* stats */
+/* Stats Section */
 
 
 .quick-stats {
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
+    display: flex;
+    align-items: center; 
+    margin-bottom: 30px;
 }
 
-.quick-title {
-  width: 150px;
-  font-size: 22px;
-  font-weight: 600;
-  margin-left: 22px;
-}
-
-/* right cards */
 .stats-row {
-  flex: 1;
-  display: flex;
+    flex: 1;
+    display: flex;
+    
 }
 
-/* stat cards */
 .stat-box {
-  flex: 1;
-  background: #B1EDB1;
-  padding: 15px;
-  border-radius: 8px;
-  text-align: center;
-  margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start;
+    background: #b6edb8;
+    padding: 15px 40px;
+    border-radius: 12px;
+    margin-left: 40px;
+    text-align: left;
 }
 
+.stat-box p {
+    margin-top: 10px;
+}
 
 .badge {
-  background: #A9FF9F;
-  padding: 2px 8px;
-  border-radius: 6px;
-  font-size: 12px;
-  margin-left: 6px;
-}
-
-.faq-text {
-  align-items: center;
+    background: #99ff8a; 
+    color: #1a3a1a;
+    padding: 4px 10px;
+    border-radius: 6px; 
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: auto; 
+    display: inline-block;
 }
 
 .notif-dot {
-  width: 10px;
-  height: 10px;
-  background: #ff3b30;
-  border-radius: 50%;
-  display: inline-block;
-  margin-left: 8px;
-  transform: translateY(-5px);
+    width: 8px;
+    height: 8px;
+    background: #ff4d4d;
+    border-radius: 50%;
+    display: inline-block;
+    transform: translateY(-5px);
 }
 
+/* Bottom Section */
+.dashboard-bottom {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.profile-card {
+    flex: 1.2;
+    background: rgba(255,255,255,0.5);
+    padding: 20px;
+    border-radius: 24px;
+    border: 1px solid white;
+}
 
 .dashboard-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 45%;
+    flex: 0.8;
+    list-style: none;
+    margin-right: 20px;
 }
 
-.dashboard-bottom {
-  display: flex;
-  align-items: flex-start;
-  margin-top: 20px;
-}
-
-
-/* row style */
 .dashboard-menu li {
-  display: flex;
-  align-items: center;
-
-  padding: 12px 14px;
-  margin-bottom: 10px;
-
-  font-size: 15px;
-  color: #2f2f2f;
-
-  background: rgba(255,255,255,0.45);
-  border-radius: 10px;
+    background: white;
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
 }
 
 .dashboard-menu img {
-  width: 20px;
-  height: 20px;
-  margin-right: 12px;
-  opacity: 0.9;
-}
+   width: 22px;
+    margin-right: 12px; 
+  }
 
-
-.dashboard-menu li:last-child {
-  margin-bottom: 0;
-}
-
-/* right card */
-.profile-card {
-  width: 62%;
-  margin-left: 20px;
-  background: #e8f5e8;
-  padding: 18px;
-  border-radius: 16px;
-}
-
-/* info box layout */
 .info {
-  display: flex;
-  align-items: center;
-  background: #cdeed1;
-  padding: 12px;
-  border-radius: 12px;
-  margin-bottom: 12px;
-  position: relative;
+    display: flex;
+    align-items: center;
+    background: #e2f6e5;
+    padding: 12px;
+    border-radius: 15px;
+    margin-bottom: 12px;
 }
 
-.info.wide {
-  width: 100%;
-}
+.info-text span { 
+   color: #618a61;
+   }
 
-.info-text {
-  margin-left: 12px;
-}
+.info-text p {
+   font-weight: 600;
+   }
 
-.info span {
-  color: #406b40;
-}
-
-.info p {
-  margin-top: 2px;
-}
-
-/* icons */
 .info-icon {
-  width: 32px;
-}
+  
+    margin-right: 12px;
+   }
 
 .edit-icon {
-  width: 18px;
-  margin-left: auto;
-  cursor: pointer;
-}
-
+   margin-left: auto;
+    cursor: pointer;
+   }
 
 .info-row {
-  display: flex;
-}
-
-.info-row .info:first-child {
-  margin-right: 12px;
-}
+   display: flex;
+   }
 
 .info-row .info {
-  flex: 1;
+   flex: 1;
+   }
+
+.info-row .info:first-child {
+   margin-right: 10px;
+   }
+
+
+.save-btn {
+    width: 100%;
+    padding: 16px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 18px; 
+    background-color: #d8e8dc; 
+    color: #6a7c6e; 
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
-/* button */
-.save-btn {
-  width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: 14px;
-  background: #c5d8c8;
-  color: #5b6e5e;
-  font-size: 16px;
-  cursor: pointer;
+.save-btn:hover {
+    background-color: #c8d8cc; 
+}
+
+.save-btn:active {
+    transform: scale(0.98); 
+}
+
+/* --- RESPONSIVE MOBILE VIEW --- */
+@media (max-width: 575.98px) {
+    .dashboard-sec {
+        padding: 0;
+    }
+
+    .child-dashboard {
+        padding: 20px 15px;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    /* Small Leaf for Mobile */
+    .leaf-image {
+        width: 150px !important;
+        top: -10px !important;
+        left: -10px !important;
+    }
+
+    .leaf-image img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .bottom-leaf-image {
+        display: none !important;
+    }
+
+    .profile-img {
+        height: 130px !important;
+        width: 130px !important;
+    }
+
+    .profile-bg {
+        width: 200% !important;
+        opacity: 0.1 !important;
+    }
+
+    .profile-edit {
+        bottom: 15px !important;
+        right: 15px !important;
+        width: 28px !important;
+        height: 28px !important;
+    }
+
+    .quick-stats {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .quick-title {
+        margin-bottom: 15px;
+        margin-left: 0;
+        font-size: 18px;
+    }
+
+    .stats-row {
+        flex-direction: row !important; 
+        width: 100%;
+        gap: 8px;
+    }
+
+    .stat-box {
+        flex: 1;
+        flex-direction: column; 
+        margin-left: 0 !important;
+        padding: 15px 5px !important;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .badge {
+        margin-left: 0;
+        margin-top: 8px; 
+        display: inline-block;
+        width: fit-content;
+    }
+
+    .dashboard-bottom {
+        flex-direction: column;
+    }
+
+    .profile-card {
+        width: 100%;
+        margin-bottom: 20px;
+        background: white;
+    }
+
+    .info-row {
+        flex-direction: column;
+    }
+
+    .info-row .info:first-child {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .dashboard-menu {
+        width: 100%;
+    }
+
+    .dashboard-buttons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .save-btn {
+        padding: 14px !important;
+        font-size: 16px !important;
+        margin-top: 10px !important;
+        border-radius: 15px !important;
+    }
 }
