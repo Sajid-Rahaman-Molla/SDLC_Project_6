@@ -389,12 +389,12 @@
     width: 100%;
     font-size: 14px;
   }
-.tag{
-  display: none;
-}
-.bookmark{
-  display: none;
-}
+  .tag {
+    display: none;
+  }
+  .bookmark {
+    display: none;
+  }
   .filter-toggle {
     display: inline-flex;
     align-items: center;
@@ -528,7 +528,6 @@
   .learn-more {
     font-size: 14px;
   }
- 
 }
 @media screen and (max-width: 350px) {
   .banner-sec {
@@ -552,7 +551,6 @@
   .card-content p {
     font-size: 10px;
   }
- 
 }
 
 /* small screen */

@@ -22,16 +22,16 @@
 </head>
 
 <body>
-    <!-- header-sec-starts -->
+      <!-- header-sec-starts -->
     <header class="header">
         <div class="container">
             <nav class="nav-bar">
                 <a href="./index.html" class="nav-logo"><img src="./images/LOGO For Nav Bar.svg" alt="main-logo"></a>
-                <ul class="nav-links">
+                <ul class="nav-links" id="nav-links">
                     <li><a href="./index.html">home</a></li>
                     <li><a href="./about_us.html">about us</a></li>
                     <li><a href="./blog_list.html">blog list</a></li>
-                    <li><a href="./bookmarks.html">bookmarks</a></li>
+                    <li><a href="./bookmarks.html" >bookmarks</a></li>
                     <li><a href="./faq_page.html">FAQs</a></li>
                     <li><a href="./contact_us.html" class="active-page-select">contact us</a></li>
                 </ul>
@@ -43,13 +43,14 @@
                                 alt="signup"></a>
                         <a href="./signup.html" class="cmn-btn">sign up</a>
                     </div>
-                    <!-- <a class="menu-bar" id="menu-bar"><i class="fa-solid fa-bars"></i></a> -->
+                    <a class="menu-bar" id="menu-bar"><i class="fa-solid fa-bars"></i></a>
                 </div>
             </nav>
         </div>
     </header>
     <!-- header-sec-ends -->
-
+ <!-- main start -->
+    <main>
     <!-- contact-sec-starts -->
     <section class="contact-info-sec cmn-gap">
         <div class="container">
@@ -126,6 +127,9 @@
             </div>
     </section>
     <!-- contact-us section end -->
+</main>
+ <!-- main-end -->
+
     <!------ footer-sec-starts ------>
     <footer class="footer-sec">
         <div class="container">
@@ -199,6 +203,45 @@
         </div>
     </footer>
     <!-- ---- footer-sec-ends ---- -->
+
+
+
+
+
+    <!-- toggler-js -->
+    <script>
+        const toggleBtn = document.getElementById('menu-bar');
+        const navLinks = document.querySelector('.nav-links');
+        const icon = toggleBtn.querySelector('i');
+
+        toggleBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+
+            if (navLinks.classList.contains('active')) {
+                // Menu open
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Menu close
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Reset menu on window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 991.98) {
+                // Desktop view - reset everything
+                navLinks.classList.remove('active');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+
 
 </body>
 
