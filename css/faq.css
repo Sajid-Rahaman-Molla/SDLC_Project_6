@@ -198,3 +198,172 @@
 .question-image img {
     display: block;
 }
+
+
+
+
+
+/* responsive */
+@media (max-width: 1400px) {
+
+    h3,
+    .heading-3 {
+        font-size: 30px;
+    }
+
+    h1,
+    .heading-1 {
+        font-size: 70px;
+    }
+
+    h2,
+    .heading-2 {
+        font-size: 46px;
+    }
+
+    .accordion-part {
+        gap: 80px;
+    }
+
+    .question-content {
+        max-width: 48%;
+    }
+}
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 992px) {
+    .accordion-part {
+        gap: 20px;
+    }
+
+    h3,
+    .heading-3 {
+        font-size: 25px;
+    }
+
+    h2,
+    .heading-2 {
+        font-size: 40px;
+    }
+
+    .primary-color-text {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    h1,
+    .heading-1 {
+        font-size: 60px;
+        margin-bottom: 15px;
+    }
+
+    .banner-child {
+        max-width: 85%;
+        margin: 0 auto;
+    }
+
+    h2,
+    .heading-2 {
+        font-size: 35px;
+    }
+
+    .heading-text {
+        margin-bottom: 60px;
+    }
+
+    .left-sec,
+    .right-sec {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .accordion-part {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .question-image {
+        width: 100%;
+    }
+
+    .question-image img {
+        margin: 0 auto;
+    }
+
+    .question-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .question-content {
+        max-width: 85%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+
+    h1,
+    .heading-1 {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+
+    .banner-child {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    p,
+    .paragraph {
+        font-size: 15px;
+    }
+
+    .primary-color-text {
+        font-size: 20px;
+    }
+
+    h2,
+    .heading-2 {
+        font-size: 31px;
+    }
+
+    .faq-left p {
+        font-size: 15px;
+    }
+
+    .faq-item {
+        padding: 12px 12px;
+    }
+
+    .question-wrapper {
+        gap: 0px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

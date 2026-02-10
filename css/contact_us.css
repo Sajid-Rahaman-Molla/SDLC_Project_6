@@ -394,6 +394,12 @@ position: relative;
     font-size: 13px;
     color: #0c2a1f;
 }
+.input-box-contact-us textarea:focus+label,textarea
+.input-box-contact-us textarea:not(:placeholder-shown)+label {
+    top: -1px;
+    font-size: 13px;
+    color: #0c2a1f;
+}
 
 
 
