@@ -1,113 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile Dashboard</title>
+
     <link rel="stylesheet" href="./css/login.css">
+        <!-- <link rel="stylesheet" href="./css/style.css"> -->
 </head>
+
 <body>
-    <section class="dashboard-sec">
+    <!-- header-sec-starts -->
+    <!-- <header class="header">
         <div class="container">
-            <div class="child-dashboard">
-                <div class="leaf-image">
-                    <img src="./images/loged-in/left-side-leaf.png" alt="">
-                </div>
-
-                <div class="dashboard-head">
-                    <div class="profile-img">
-                        <img class="profile-bg" src="./images/loged-in/Group.png" alt="">
-                        <img class="profile-main" src="./images/loged-in/arushi-pic.png" alt="">
-                        <img class="profile-edit" src="./images/loged-in/pencil-tag.png" alt="">
+            <nav class="nav-bar">
+                <a href="./index.html" class="nav-logo"><img src="./images/LOGO For Nav Bar.svg" alt="main-logo"></a>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="./index.html">home</a></li>
+                    <li><a href="./about_us.html">about us</a></li>
+                    <li><a href="./blog_list.html">blog list</a></li>
+                    <li><a href="./bookmarks.html">bookmarks</a></li>
+                    <li><a href="./faq_page.html">FAQs</a></li>
+                    <li><a href="./contact_us.html">contact us</a></li>
+                </ul>
+                <div class="nav-right">
+                    <div class="nav-right-2">
+                        <a href="#" class="search-icon"><img src="./images/home-page-images/search.png"
+                                alt="search"></a>
+                        <a href="./login.html" class="user-signup"><img src="./images/home-page-images/user.png"
+                                alt="signup"></a>
+                        <a href="./signup.html" class="cmn-btn">sign up</a>
                     </div>
-                    <h2 class="user-name">Arushi Sharma</h2>
-                    <div class="dashboard-buttons">
-                        <button class="btn-switch">
-                            <img src="./images/loged-in/exchange-img.png"> Switch account
-                        </button>
-                        <button class="btn-logout">
-                            <img src="./images/loged-in/logout-im.png"> Log out
-                        </button>
-                    </div>
+                    <a class="menu-bar" id="menu-bar"><i class="fa-solid fa-bars"></i></a>
                 </div>
+            </nav>
+        </div>
+    </header> -->
+    <!-- header-sec-ends -->
+    <main>
+        <section class="dashboard-sec">
+            <div class="container">
+                <div class="child-dashboard">
+                    <div class="leaf-image">
+                        <img src="./images/loged-in/left-side-leaf.png" alt="">
+                    </div>
 
-                <div class="stats-divider"></div>
-
-                <div class="quick-stats">
-                    <h3 class="quick-title">Quick Stats</h3>
-                    <div class="stats-row">
-                        <div class="stat-box">
-                            <img src="./images/loged-in/bookmark-img.png">
-                            <p>Saved Blogs <span class="badge">12</span></p>
+                    <div class="dashboard-head">
+                        <div class="profile-img">
+                            <img class="profile-bg" src="./images/loged-in/Group.png" alt="">
+                            <img class="profile-main" src="./images/loged-in/arushi-pic.png" alt="">
+                            <img class="profile-edit" src="./images/loged-in/pencil-tag.png" alt="">
                         </div>
-                        <div class="stat-box">
-                            <img src="./images/loged-in/book-img.png">
-                            <p>Blogs Read <span class="badge">12</span></p>
-                        </div>
-                        <div class="stat-box faq-box">
-                            <img src="./images/loged-in/Faq-img.png">
-                            <p class="faq-text">FAQ Activity <span class="notif-dot"></span></p>
+                        <h2 class="user-name">Arushi Sharma</h2>
+                        <div class="dashboard-buttons">
+                            <button class="btn-switch">
+                                <img src="./images/loged-in/exchange-img.png"> Switch account
+                            </button>
+                            <button class="btn-logout">
+                                <img src="./images/loged-in/logout-im.png"> Log out
+                            </button>
                         </div>
                     </div>
-                </div>
 
-                <div class="dashboard-bottom">
-                    <div class="profile-card">
-                        <div class="info wide">
-                            <img class="info-icon" src="./images/loged-in/hash-tag.png">
-                            <div class="info-text">
-                                <span>User Id</span>
-                                <p>USR-Aru24681357</p>
+                    <div class="stats-divider"></div>
+
+                    <div class="quick-stats">
+                        <h3 class="quick-title">Quick Stats</h3>
+                        <div class="stats-row">
+                            <div class="stat-box">
+                                <img src="./images/loged-in/bookmark-img.png">
+                                <p>Saved Blogs <span class="badge">12</span></p>
+                            </div>
+                            <div class="stat-box">
+                                <img src="./images/loged-in/book-img.png">
+                                <p>Blogs Read <span class="badge">12</span></p>
+                            </div>
+                            <div class="stat-box faq-box">
+                                <img src="./images/loged-in/Faq-img.png">
+                                <p class="faq-text">FAQ Activity <span class="notif-dot"></span></p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="info-row">
-                            <div class="info">
-                                <img class="info-icon" src="./images/loged-in/mail-com.png">
+                    <div class="dashboard-bottom">
+                        <div class="profile-card">
+                            <div class="info wide">
+                                <img class="info-icon" src="./images/loged-in/hash-tag.png">
                                 <div class="info-text">
-                                    <span>Username</span>
-                                    <p>iam.Arushi</p>
+                                    <span>User Id</span>
+                                    <p>USR-Aru24681357</p>
+                                </div>
+                            </div>
+
+                            <div class="info-row">
+                                <div class="info">
+                                    <img class="info-icon" src="./images/loged-in/mail-com.png">
+                                    <div class="info-text">
+                                        <span>Username</span>
+                                        <p>iam.Arushi</p>
+                                    </div>
+                                    <img class="edit-icon" src="./images/loged-in/pencil-edit.png">
+                                </div>
+
+                                <div class="info">
+                                    <img class="info-icon" src="./images/loged-in/profile-icon.png">
+                                    <div class="info-text">
+                                        <span>Full Name</span>
+                                        <p>Arushi Sharma</p>
+                                    </div>
+                                    <img class="edit-icon" src="./images/loged-in/pencil-edit.png">
+                                </div>
+                            </div>
+
+                            <div class="info wide">
+                                <img class="info-icon" src="./images/loged-in/mail-icon.png">
+                                <div class="info-text">
+                                    <span>Mail Id</span>
+                                    <p>arushisharma@gmail.com</p>
                                 </div>
                                 <img class="edit-icon" src="./images/loged-in/pencil-edit.png">
                             </div>
 
-                            <div class="info">
-                                <img class="info-icon" src="./images/loged-in/profile-icon.png">
-                                <div class="info-text">
-                                    <span>Full Name</span>
-                                    <p>Arushi Sharma</p>
-                                </div>
-                                <img class="edit-icon" src="./images/loged-in/pencil-edit.png">
-                            </div>
+                            <button class="save-btn">Make Changes</button>
                         </div>
 
-                        <div class="info wide">
-                            <img class="info-icon" src="./images/loged-in/mail-icon.png">
-                            <div class="info-text">
-                                <span>Mail Id</span>
-                                <p>arushisharma@gmail.com</p>
-                            </div>
-                            <img class="edit-icon" src="./images/loged-in/pencil-edit.png">
-                        </div>
-
-                        <button class="save-btn">Make Changes</button>
+                        <ul class="dashboard-menu">
+                            <li><img src="./images/loged-in/blog.png">Liked Blogs</li>
+                            <li><img src="./images/loged-in/bubble-chat.png">Your Comments</li>
+                            <li><img src="./images/loged-in/share-img.png">Shared Blogs</li>
+                            <li><img src="./images/loged-in/contact-book.png">Contact Better Being</li>
+                            <li><img src="./images/loged-in/notification.png">Notifications</li>
+                            <li><img src="./images/loged-in/document-validation.png">Terms & Conditions</li>
+                        </ul>
                     </div>
 
-                    <ul class="dashboard-menu">
-                        <li><img src="./images/loged-in/blog.png">Liked Blogs</li>
-                        <li><img src="./images/loged-in/bubble-chat.png">Your Comments</li>
-                        <li><img src="./images/loged-in/share-img.png">Shared Blogs</li>
-                        <li><img src="./images/loged-in/contact-book.png">Contact Better Being</li>
-                        <li><img src="./images/loged-in/notification.png">Notifications</li>
-                        <li><img src="./images/loged-in/document-validation.png">Terms & Conditions</li>
-                    </ul>
-                </div>
-
-                <div class="bottom-leaf-image">
-                    <img src="./images/loged-in/right-side-leaf.png" alt="">
+                    <div class="bottom-leaf-image">
+                        <img src="./images/loged-in/right-side-leaf.png" alt="">
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
+  
+
+
+
+    <!-- toggler-js -->
+    <script>
+        const toggleBtn = document.getElementById('menu-bar');
+        const navLinks = document.querySelector('.nav-links');
+        const icon = toggleBtn.querySelector('i');
+
+        toggleBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+
+            if (navLinks.classList.contains('active')) {
+                // Menu open
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Menu close
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Reset menu on window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 991.98) {
+                // Desktop view - reset everything
+                navLinks.classList.remove('active');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
 </body>
+
 </html>
