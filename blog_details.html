@@ -35,7 +35,7 @@
         <div class="container">
             <nav class="nav-bar">
                 <a href="./index.html" class="nav-logo"><img src="./images/LOGO For Nav Bar.svg" alt="main-logo"></a>
-                <ul class="nav-links">
+                <ul class="nav-links" id="nav-links">
                     <li><a href="./index.html">home</a></li>
                     <li><a href="./about_us.html">about us</a></li>
                     <li><a href="./blog_list.html">blog list</a></li>
@@ -51,12 +51,13 @@
                                 alt="signup"></a>
                         <a href="./signup.html" class="cmn-btn">sign up</a>
                     </div>
-                    <!-- <a class="menu-bar" id="menu-bar"><i class="fa-solid fa-bars"></i></a> -->
+                    <a class="menu-bar" id="menu-bar"><i class="fa-solid fa-bars"></i></a>
                 </div>
             </nav>
         </div>
     </header>
     <!-- header-sec-ends -->
+
     <main>
         <div class="blog-page">
             <div class="container">
@@ -290,79 +291,39 @@
     </main>
 
 
-    <!------ footer-sec-starts ------>
-    <footer class="footer-sec">
-        <div class="container">
-            <!-- Top Support Section -->
-            <div class="footer-top">
-                <div class="footer-heading-top heading-3">Stay Healthy & Informed: Subscribe to Our Newsletter</div>
-                <p class="heading-6">Get the latest insights, recipes, and expert advice delivered straight to your
-                    inbox every week. We
-                    cover everything
-                    from mental clarity to fitness routines to help you live a balanced, vibrant life.</p>
-                <form class="subscribe-form">
-                    <span class="mail-icon">✉</span>
-                    <div class="input-box">
-                        <input type="email" class="subscribe-input" placeholder=" " required />
-                        <label class="floating-label">Enter your mail</label>
-                    </div>
-                    <button class="subscribe-btn cmn-btn">Subscribe</button>
-                </form>
-            </div>
+    <!-- toggler-js -->
+    <script>
+        const toggleBtn = document.getElementById('menu-bar');
+        const navLinks = document.querySelector('.nav-links');
+        const icon = toggleBtn.querySelector('i');
 
-            <!-- Bottom Footer Columns -->
-            <div class="footer-child">
-                <!-- footer-1 -->
-                <div class="cmn-footer footer-1">
-                    <a href="./index.html" class="footer-logo"><img src="./images/home-page-images/footer-logo.svg"
-                            alt=""></a>
-                    <p class="footer-text">Welcome to Better Being! Here, you can explore insightful articles and blogs
-                        covering fitness.
-                    </p>
-                </div>
-                <!-- footer-2 -->
-                <div class="cmn-footer">
-                    <div class="footer-heading">Quick links</div>
-                    <ul class="footer-links">
-                        <li><a href="./about_us.html">About Us</a></li>
-                        <li><a href="./blog_list.html">Blog List</a></li>
-                        <li><a href="./contact_us.html">bookmarks</a></li>
-                        <li><a href="./faq_page.html">FAQs</a></li>
-                        <li><a href="./term_condition.html">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                <!-- footer-3 -->
-                <div class="cmn-footer">
-                    <div class="footer-heading">Support</div>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="fa-solid fa-phone phone-icon"></i>+(555) 012-3456</a></li>
-                        <li><a href="#" class="email-fild"><i class="fa-solid fa-envelope email-icon"></i>
-                                betterbeing@gmail.com </a></li>
-                    </ul>
-                </div>
-                <!-- footer-4 -->
-                <div class="cmn-footer newsletter">
-                    <div class="footer-heading">social media</div>
-                    <ul class="social-icons">
-                        <li> <a href="https://www.facebook.com/share/1HDWhpN3AB/"><i
-                                    class="fa-brands fa-facebook-f"></i></a></li>
-                        <li> <a href="https://www.instagram.com/betterbeing7?igsh=MWdvdnFraGM0NjBxNA=="><i
-                                    class="fa-brands fa-instagram"></i></a></li>
-                        <li> <a href="https://x.com/BetterBein"><i class="fa-brands fa-x-twitter"></i></a></li>
-                        <li> <a href="https://pin.it/cpMc6sOsB"><i class="fa-brands fa-pinterest"></i></a></li>
-                    </ul>
-                </div>
-            </div>
+        toggleBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
 
-            <!-- Footer Bottom -->
-            <div class="footer-end">
-                <div class="copy-right">copyright<i class="fa-regular fa-copyright copyright-icon"></i>2025 <a
-                        href="./index.html" class="brand-a">betterbeing</a><span class="reserved-text"> all rights
-                        reserved</span></div>
-            </div>
-        </div>
-    </footer>
-    <!-- ---- footer-sec-ends ---- -->
+            if (navLinks.classList.contains('active')) {
+                // Menu open
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Menu close
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Reset menu on window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 991.98) {
+                // Desktop view - reset everything
+                navLinks.classList.remove('active');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
 
 </body>
 
