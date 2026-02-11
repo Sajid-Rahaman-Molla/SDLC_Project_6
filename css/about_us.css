@@ -421,7 +421,7 @@
 
 /* media queries */
 @media screen and (max-width: 1400px) {
-  
+
     .banner-child p {
         width: 65%;
     }
@@ -597,7 +597,7 @@
         height: 317px;
         width: 341px;
         position: absolute;
-        bottom: 6px;
+        bottom: 0;
         left: 34px;
     }
 
@@ -640,6 +640,14 @@
 
     .contact-left {
         padding-bottom: 30px;
+    }
+
+    .expertise-left {
+        padding-bottom: 30px;
+    }
+
+    .community-child {
+        height: 410px;
     }
 
 
@@ -711,7 +719,7 @@
         width: 320px;
     }
 
-    .community-img img{
+    .community-img img {
         position: absolute;
         bottom: 0;
         left: 110px;
@@ -742,15 +750,16 @@
         font-size: 28px;
     }
 
-    .expertise-left,.expertise-right{
+    .expertise-left,
+    .expertise-right {
         width: 100%;
     }
 
-    .expertise-left{
+    .expertise-left {
         padding-bottom: 50px;
     }
 
-        .map-wrapper iframe {
+    .map-wrapper iframe {
         width: 560px;
     }
 }
@@ -804,16 +813,15 @@
 
 
     .community-img img {
-        width: 260px;
+        width: 325px;
     }
 
     .community-lower-sec {
-        flex-direction: column;
         align-items: center;
     }
 
     .community-blogs-text {
-        margin: 0 0 25px 0;
+        margin-right: 25px;
         text-align: center;
     }
 
@@ -843,6 +851,42 @@
         font-size: 14px;
         line-height: 1.6;
     }
+
+    .map-wrapper iframe {
+        width: 400px;
+    }
+
+    .office-phone-wrapper,
+    .mail-time-wrapper {
+        flex-direction: column;
+    }
+
+    .cmn-contact-card {
+        margin-bottom: 20px;
+    }
+
+    .office-phone-wrapper {
+        margin-bottom: 0px;
+    }
+
+    .cmn-contact-card {
+        width: 90%;
+    }
+
+    .contact-left {
+        text-align: center;
+    }
+
+    .office-phone-wrapper {
+        margin-bottom: 0px;
+        align-items: center;
+    }
+
+    .office-phone-wrapper,
+    .mail-time-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 420px) {
@@ -866,6 +910,10 @@
         height: 120px;
     }
 
+    .story-left{
+        text-align: center;
+    }
+
     .story-left p {
         font-size: 13px;
     }
@@ -875,8 +923,13 @@
         height: 130px;
     }
 
+    .community-img img {
+        width: 325px;
+    }
+
     .community-right h2 {
         font-size: 24px;
+        padding-top: 35px;
     }
 
     .count,
@@ -892,7 +945,59 @@
         font-size: 24px;
     }
 
-        .map-wrapper iframe {
-        width: 410px;
+    .map-wrapper iframe {
+        width: 310px;
+    }
+
+    .community-img img {
+        width: 210px;
+        height: auto;
+        left: 65px;
+    }
+
+    .community-blogs-text {
+        margin-right: 25px;
+        text-align: center;
+    }
+
+    h2,
+    .heading-2 {
+        font-size: 35px;
+    }
+
+    .community-inner-text {
+        padding: 0;
+    }
+
+    .count,
+    .plus {
+        font-size: 30px;
+    }
+
+    .story-left h2 {
+        font-size: 28px;
+    }
+
+    .primary-color-text {
+        margin-bottom: 0px;
+        font-size: 20px;
+    }
+
+    h2,
+    .heading-2 {
+        font-size: 28px;
+    }
+
+    .nav-logo {
+        width: 83px;
+    }
+
+    .menu-bar i {
+        font-size: 24px;
+    }
+
+    .cmn-btn {
+        padding: 4px 8px;
+        font-size: 15px;
     }
 }
