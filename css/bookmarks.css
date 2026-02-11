@@ -297,9 +297,8 @@
   .wellness-title {
     font-size: 40px;
   }
-}
 
-/* .main-wellness {
+ .main-wellness {
     max-width: 1100px;
   }
 
@@ -332,7 +331,7 @@
   }
 
   .card-content {
-    width: 55%;
+    width: 50%;
   }
 
   .carc-content p {
@@ -370,11 +369,10 @@
 
   .card-img-div img {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
+    
   }
 
-} */
+} 
 @media screen and (max-width: 991px) {
   .banner-sec {
     height: 660px;
@@ -454,20 +452,21 @@
   }
 
   .card-image {
-    width: 38%;
+    width:100%;
     padding-right: 12px;
   }
 
   .card-content {
-    width: 62%;
+    width: 100%;
   }
 
-  .card-img-div img {
+  /* .card-img-div img {
     height: 120px;
     object-fit: cover;
-  }
+  } */
 
   .card-content h3 {
+    height: 30px;
     font-size: 16px;
     margin-bottom: 8px;
   }
@@ -497,6 +496,10 @@
     width: 100%;
     font-size: 14px;
   }
+  .card-content h3 {
+    height: 41px;
+    
+}
 }
 @media screen and (max-width: 575px) {
   .banner-sec {
@@ -514,16 +517,21 @@
   }
 
   .card-image {
-    width: 35%;
+    width: 100%;
   }
 
   .card-content {
-    width: 65%;
+    width: 100%;
   }
 
   .card-img-div img {
-    height: 95px;
+    height: 137px;
   }
+  .wellness-title {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: 0;
+}
 
   .learn-more {
     font-size: 14px;
