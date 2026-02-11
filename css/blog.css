@@ -240,7 +240,7 @@
 /* =========================
    MAX WIDTH 1199.98px
 =========================*/
-@media (max-width: 1199.98px){
+@media (max-width: 1200px){
 
   .container{
     max-width: 100%;
@@ -325,24 +325,7 @@
 }
 
 
-@media (max-width: 991.98px){
-
-   .nav-links {
-        display: none;
-    }
-
-    .nav-right {
-        display: flex;
-        align-items: center;
-    }
-
-    .nav-right-2 {
-        margin-right: 35px;
-    }
-
-    .menu-bar i {
-        font-size: 32px;
-    }
+@media (max-width: 992px){
 
   
   .banner-sec {
@@ -350,9 +333,6 @@
     padding: 20px;
   }
 
-  .banner-child h1 {
-    /* font-size: 42px; */
-  }
 
   .banner-child p {
     width: 100%;
@@ -383,7 +363,7 @@
 }
 
 
-@media (max-width: 767.98px){
+@media (max-width: 768px){
 
   .nav-right-2 {
         margin-right: 26px;
@@ -456,7 +436,7 @@
 
 
 
-@media (max-width: 575.98px){
+@media (max-width: 576px){
 
   .banner-sec {
     height: 600px;
