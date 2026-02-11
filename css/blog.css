@@ -36,6 +36,7 @@
 /* banner-sec-ends */
 
 /* BLOG SECTION */
+
 .blog-sec {
   padding: 80px 0;
 }
@@ -207,9 +208,9 @@
     height: 300px;
   }
 
-  .banner-child h1{
+  /* .banner-child h1{
     
-  }
+  } */
 
   .banner-child p{
     width:80%;
@@ -269,9 +270,9 @@
     padding: 20px;
   }
 
-  .banner-child h1 {
+  /* .banner-child h1 {
     
-  }
+  } */
 
   .banner-child p {
     width: 60%;
@@ -350,9 +351,9 @@
     padding: 20px;
   }
 
-  .banner-child h1 {
-    /* font-size: 42px; */
-  }
+  /* .banner-child h1 {
+    font-size: 42px;
+  } */
 
   .banner-child p {
     width: 100%;
