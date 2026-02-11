@@ -1,8 +1,10 @@
+/* universal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 /* cmn-class */
 body {
   font-family: "Poppins", sans-serif;
@@ -232,9 +234,7 @@ p,
 }
 
 /* header-sec-ends */
->>>>>>> 6571bd2f4685700e49f9e5f786cdbf2a9cb95c0c
 
->>>>>>> f4e51ee316ef8aa068ee7d59ef119ed1395fda69
 /* <!-- contact-sec-starts --> */
 .contact-info-sec {
   background-color: var(--text-primary-color);
@@ -334,10 +334,6 @@ p,
   background: linear-gradient(to bottom, #7ab53167 18%, #d1fccc 100%);
   right: -10%;
   bottom: -10%;
-<<<<<<< HEAD
-
-=======
->>>>>>> f4e51ee316ef8aa068ee7d59ef119ed1395fda69
 }
 
 .left-column-head p {
@@ -359,7 +355,6 @@ p,
 .contact-info li:nth-child(3) {
   margin-bottom: 0;
 }
-
 .contact-info li a {
   color: var(--dark-color);
 }
@@ -368,25 +363,7 @@ p,
   width: 60%;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
   padding: 50px;
-=======
-  padding: 40px;
-<<<<<<< HEAD
-}
-
-.right-column-sub {
-  width: 100%;
-  position: relative;
-}
-
-.input-box-contact-us {
-  position: relative;
-  margin-bottom: 15px;
-}
-
-=======
->>>>>>> 6571bd2f4685700e49f9e5f786cdbf2a9cb95c0c
 }
 .right-column-sub {
   width: 80%;
@@ -397,11 +374,10 @@ p,
   margin-bottom: 40px;
 }
 
->>>>>>> f4e51ee316ef8aa068ee7d59ef119ed1395fda69
 .input-box-contact-us input,
 textarea {
   width: 100%;
-  padding: 18px 12px;
+  padding: 14px 12px;
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 16px;
@@ -422,13 +398,8 @@ textarea {
 }
 
 /* MAGIC */
-<<<<<<< HEAD
-.input-box-contact-us input:focus+label,
-textarea .input-box-contact-us input:not(:placeholder-shown)+label {
-=======
 .input-box-contact-us input:focus + label,
 textarea .input-box-contact-us input:not(:placeholder-shown) + label {
->>>>>>> f4e51ee316ef8aa068ee7d59ef119ed1395fda69
   top: -1px;
   font-size: 13px;
   color: #0c2a1f;
@@ -505,7 +476,6 @@ form input::placeholder {
   .child-contact {
     padding: 60px;
   }
-
   .contact-heading h2 {
     font-size: 42px;
   }
@@ -527,20 +497,11 @@ form input::placeholder {
   .contact-info li {
     margin-bottom: 40px;
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> f4e51ee316ef8aa068ee7d59ef119ed1395fda69
   .head-para {
     width: 75%;
   }
 }
-<<<<<<< HEAD
-
-@media screen and (max-width:991px) {
-=======
 @media screen and (max-width: 991px) {
->>>>>>> f4e51ee316ef8aa068ee7d59ef119ed1395fda69
   .child-contact {
     padding: 40px;
     margin: 80px 0;
@@ -577,12 +538,7 @@ form input::placeholder {
     max-width: 40%;
   }
 }
-<<<<<<< HEAD
-
-@media screen and (max-width:767px) {
-=======
 @media screen and (max-width: 767px) {
->>>>>>> f4e51ee316ef8aa068ee7d59ef119ed1395fda69
   .child-contact {
     padding: 30px 20px;
   }
@@ -607,7 +563,6 @@ form input::placeholder {
     justify-content: space-between;
   }
 }
-
 @media screen and (max-width: 575px) {
   .child-contact {
     padding: 25px 15px;
@@ -660,10 +615,6 @@ form input::placeholder {
     max-width: 55%;
   }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> f4e51ee316ef8aa068ee7d59ef119ed1395fda69
 @media screen and (max-width: 320px) {
   .child-contact {
     padding: 25px 15px;
@@ -715,9 +666,4 @@ form input::placeholder {
   .bottom-leaf-image {
     max-width: 55%;
   }
-<<<<<<< HEAD
-
 }
-=======
-}
->>>>>>> f4e51ee316ef8aa068ee7d59ef119ed1395fda69
