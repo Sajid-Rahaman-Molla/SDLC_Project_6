@@ -280,7 +280,7 @@
 
 /* media queries */
 
-@media screen and (max-width: 1199px) {
+/* @media screen and (max-width: 1199px) {
   .banner-sec {
     height: 600px;
     padding: 20px;
@@ -313,7 +313,7 @@
   .card-content h3 {
     font-size: 18px;
   }
-}
+} */
 
 @media screen and (max-width: 1199px) {
   .wellness-left-part {
