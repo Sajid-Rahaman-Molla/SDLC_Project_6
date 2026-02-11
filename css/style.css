@@ -273,9 +273,6 @@ p,
 }
 
 .title-animation {
-  font-size: 72px;
-  font-weight: 600;
-  line-height: 1.2;
   color: var(--text-primary-color);
 }
 
@@ -1470,6 +1467,7 @@ p,
   h3,
   .heading-3 {
     font-size: 24px;
+
   }
 }
 

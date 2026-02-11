@@ -146,6 +146,7 @@ p,
 
 /* header-sec-starts */
 .header {
+  position: relative;
   background-color: var(--nav-bar-bg-color);
   padding: 14px 0;
 }
@@ -211,22 +212,29 @@ p,
   display: block;
 }
 
-.user-signup,
-.search-icon {
-  color: var(--dark-color);
-  /* margin-right: 36px; */
-  font-size: 22px;
+.user-signup img,
+.search-icon img {
+  display: block;
+  margin-right: 36px;
+  height: 22px;
+  width: 22px;
 }
 
-.nav-right-2 i {
+.nav-right-2 {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right-2 img {
   transition: var(--default-animation);
 }
 
-.nav-right-2 i:hover {
+.nav-right-2 img:hover {
   transform: scale(1.2);
 }
 
 /* header-sec-ends */
+
 /* <!-- contact-sec-starts --> */
 .contact-info-sec {
   background-color: var(--text-primary-color);
@@ -243,7 +251,7 @@ p,
 }
 
 .child-contact {
-  margin:60px 0;
+  margin: 60px 0;
   position: relative;
   border-radius: 16px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
@@ -325,7 +333,6 @@ p,
   background: linear-gradient(to bottom, #7ab53167 18%, #d1fccc 100%);
   right: -10%;
   bottom: -10%;
-  
 }
 
 .left-column-head p {
@@ -352,52 +359,50 @@ p,
 }
 
 .right-column {
-    width: 60%;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
 }
-.right-column-sub{
+.right-column-sub {
   width: 100%;
-    position: relative;
+  position: relative;
 }
-.input-box-contact-us{
-position: relative;
-    margin-bottom: 15px;
+.input-box-contact-us {
+  position: relative;
+  margin-bottom: 15px;
 }
 
-.input-box-contact-us input,textarea {
-    width: 100%;
-    padding: 14px 12px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    outline: none;
+.input-box-contact-us input,
+textarea {
+  width: 100%;
+  padding: 14px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
 }
 
 .input-box-contact-us label {
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 14px;
-    color: #999;
-    pointer-events: none;
-    transition: 0.3s ease;
-    background: #fff;
-    padding: 0 5px;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #999;
+  pointer-events: none;
+  transition: 0.3s ease;
+  background: #fff;
+  padding: 0 5px;
 }
 
 /* MAGIC */
-.input-box-contact-us input:focus+label,textarea
-.input-box-contact-us input:not(:placeholder-shown)+label {
-    top: -1px;
-    font-size: 13px;
-    color: #0c2a1f;
+.input-box-contact-us input:focus + label,
+textarea .input-box-contact-us input:not(:placeholder-shown) + label {
+  top: -1px;
+  font-size: 13px;
+  color: #0c2a1f;
 }
-
-
-
 
 .form-group {
   margin-bottom: 15px;
@@ -491,14 +496,12 @@ form input::placeholder {
   .contact-info li {
     margin-bottom: 40px;
   }
-   .head-para {
+  .head-para {
     width: 75%;
   }
-
-
 }
-@media screen and (max-width:991px) {
-   .child-contact {
+@media screen and (max-width: 991px) {
+  .child-contact {
     padding: 40px;
     margin: 80px 0;
   }
@@ -534,7 +537,7 @@ form input::placeholder {
     max-width: 40%;
   }
 }
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
   .child-contact {
     padding: 30px 20px;
   }
@@ -560,7 +563,7 @@ form input::placeholder {
   }
 }
 @media screen and (max-width: 575px) {
-   .child-contact {
+  .child-contact {
     padding: 25px 15px;
     margin: 60px 0;
   }
@@ -611,8 +614,8 @@ form input::placeholder {
     max-width: 55%;
   }
 }
-  @media screen and (max-width: 320px) {
-    .child-contact {
+@media screen and (max-width: 320px) {
+  .child-contact {
     padding: 25px 15px;
     margin: 60px 0;
   }
@@ -662,5 +665,4 @@ form input::placeholder {
   .bottom-leaf-image {
     max-width: 55%;
   }
-  
-  }
+}
