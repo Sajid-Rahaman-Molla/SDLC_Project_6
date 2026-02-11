@@ -336,7 +336,6 @@
 
   .banner-child p {
     width: 100%;
-    font-size: 14px;
   }
 
 
@@ -444,9 +443,7 @@
    background-image: url(../images/blog-list/responsive.png);
   }
 
-  /* .banner-child h1 {
-    font-size: 20px;
-  } */
+
 
   .banner-child p {
     width: 100%;
