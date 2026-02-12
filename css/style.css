@@ -976,6 +976,7 @@ p,
 }
 
 .subscribe-btn:hover::after {
+  background-color: #21644D;
   width: 100%;
 }
 

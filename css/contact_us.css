@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 465feed688c4e17b802008cb1fd6126439ca915a
 /* <!-- contact-sec-starts --> */
 .contact-info-sec {
   background-color: var(--text-primary-color);
@@ -15,11 +18,12 @@
 }
 
 .child-contact {
-  margin: 60px 0;
+  width: 80%;
+  margin: 60px auto;
   position: relative;
   border-radius: 16px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-  padding: 50px;
+  padding: 60px;
   overflow: hidden;
 }
 
@@ -97,10 +101,6 @@
   background: linear-gradient(to bottom, #7ab53167 18%, #d1fccc 100%);
   right: -10%;
   bottom: -10%;
-<<<<<<< HEAD
-
-=======
->>>>>>> f4e51ee316ef8aa068ee7d59ef119ed1395fda69
 }
 
 .left-column-head p {
@@ -116,7 +116,7 @@
 }
 
 .contact-info li {
-  margin-bottom: 54px;
+  margin-bottom: 30px;
 }
 
 .contact-info li:nth-child(3) {
@@ -131,39 +131,26 @@
   width: 60%;
   align-items: center;
   justify-content: center;
-  padding: 40px;
-<<<<<<< HEAD
+  padding: 50px;
 }
 
 .right-column-sub {
-  width: 100%;
+  width: 80%;
   position: relative;
 }
 
 .input-box-contact-us {
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
-=======
-}
-.right-column-sub {
-  width: 100%;
-  position: relative;
-}
-.input-box-contact-us {
-  position: relative;
-  margin-bottom: 15px;
-}
-
->>>>>>> f4e51ee316ef8aa068ee7d59ef119ed1395fda69
 .input-box-contact-us input,
 textarea {
   width: 100%;
   padding: 14px 12px;
   border-radius: 6px;
   border: 1px solid #ccc;
-  font-size: 14px;
+  font-size: 16px;
   outline: none;
 }
 
@@ -181,13 +168,8 @@ textarea {
 }
 
 /* MAGIC */
-<<<<<<< HEAD
 .input-box-contact-us input:focus+label,
 textarea .input-box-contact-us input:not(:placeholder-shown)+label {
-=======
-.input-box-contact-us input:focus + label,
-textarea .input-box-contact-us input:not(:placeholder-shown) + label {
->>>>>>> f4e51ee316ef8aa068ee7d59ef119ed1395fda69
   top: -1px;
   font-size: 13px;
   color: #0c2a1f;
@@ -286,25 +268,13 @@ form input::placeholder {
   .contact-info li {
     margin-bottom: 40px;
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> f4e51ee316ef8aa068ee7d59ef119ed1395fda69
   .head-para {
     width: 75%;
   }
 }
-<<<<<<< HEAD
 
-@media screen and (max-width:991px) {
-=======
 @media screen and (max-width: 991px) {
->>>>>>> f4e51ee316ef8aa068ee7d59ef119ed1395fda69
-  .child-contact {
-    padding: 40px;
-    margin: 80px 0;
-  }
-
   .contact-row {
     flex-direction: column;
   }
@@ -336,15 +306,8 @@ form input::placeholder {
     max-width: 40%;
   }
 }
-<<<<<<< HEAD
 
-@media screen and (max-width:767px) {
-=======
 @media screen and (max-width: 767px) {
->>>>>>> f4e51ee316ef8aa068ee7d59ef119ed1395fda69
-  .child-contact {
-    padding: 30px 20px;
-  }
 
   .contact-logo img {
     width: 220px;
@@ -358,6 +321,14 @@ form input::placeholder {
     padding: 35px 25px 120px 25px;
   }
 
+  .right-column {
+    width: 100%;
+  }
+
+  .right-column-sub {
+    width: 100%;
+  }
+
   .contact-info li {
     margin-bottom: 30px;
   }
@@ -369,8 +340,7 @@ form input::placeholder {
 
 @media screen and (max-width: 575px) {
   .child-contact {
-    padding: 25px 15px;
-    margin: 60px 0;
+    width: 100%;
   }
 
   .heading-2 {
@@ -392,6 +362,14 @@ form input::placeholder {
   .left-column-head p {
     margin-bottom: 40px;
     font-size: 14px;
+  }
+
+  .right-column {
+    width: 100%;
+  }
+
+  .right-column-sub {
+    width: 100%;
   }
 
   .contact-info li {
@@ -418,15 +396,10 @@ form input::placeholder {
   .bottom-leaf-image {
     max-width: 55%;
   }
-}
-<<<<<<< HEAD
 
-=======
->>>>>>> f4e51ee316ef8aa068ee7d59ef119ed1395fda69
-@media screen and (max-width: 320px) {
   .child-contact {
-    padding: 25px 15px;
-    margin: 60px 0;
+    width: 100%;
+    padding: 60px 10px;
   }
 
   .heading-2 {
@@ -439,6 +412,7 @@ form input::placeholder {
 
   .left-column {
     padding: 30px 20px 110px 20px;
+    width: 100%;
   }
 
   .left-column-head h3 {
@@ -448,6 +422,10 @@ form input::placeholder {
   .left-column-head p {
     margin-bottom: 40px;
     font-size: 14px;
+  }
+
+  .right-column-sub {
+    width: 100%;
   }
 
   .contact-info li {
@@ -474,9 +452,4 @@ form input::placeholder {
   .bottom-leaf-image {
     max-width: 55%;
   }
-<<<<<<< HEAD
-
 }
-=======
-}
->>>>>>> f4e51ee316ef8aa068ee7d59ef119ed1395fda69
